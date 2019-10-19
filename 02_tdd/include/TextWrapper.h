@@ -4,11 +4,12 @@
 
 
 class TextWrapper {
-    int nSize;
-    std::string inputString;
+    //int nSize;
+    //std::string inputString;
 
 public:
 
     //static std::string columns(std::string inputString, int nSize);
     int columns(int nSize) const;
+    std::string wrapper(const char *, int nSize);
 };
