@@ -12,7 +12,7 @@ TEST(TextWrapper, HasColumnsGetter) {
 
     auto wrapper = TextWrapper{};
 
-    EXPECT_EQ(10, wrapper.columns());
+    EXPECT_EQ(10, wrapper.columns(10));
 }
 
 

@@ -14,4 +14,6 @@ int TextWrapper::columns(int nSize) const {
         std::cout << "Nieprawidlowa liczba!" << std::endl;
         exit(0);
     }
+    else
+        return nSize;
 }
