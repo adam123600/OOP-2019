@@ -15,5 +15,6 @@ int main(int argc, char* argv[])
     std::cin >> liczba;
     std::cout << "Twoja liczba " << TextWrapperMain.columns(liczba) << std::endl;
     std::cout << dummy.hello() << std::endl;
+    std::cout << TextWrapperMain.wrapper("ab", 5);
     return 0;
 }
