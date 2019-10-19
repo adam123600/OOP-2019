@@ -32,13 +32,33 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
     while(pStart[position] != '\0')
     {
         int isEOL = (pStart[position] == '\n');
-        if (isEOL || position == nSize )
+        if (isEOL || position == nSize ) {
+            if (isEOL || lastSpace == 0)
+                lastSpace = position;
+
+
+            while (*pStart != 0 && lastSpace-- > 0) {
+                std::cout << *pStart++ << std::endl;
+            }
+            std::cout << std::endl;
+
+            if (isEOL)
+                pStart++;
+
+            while (*pStart != 0 && *pStart == ' ')
+                pStart++;
+
+            lastSpace = position = 0;
+        }
+        else
         {
-            
+            if ( pStart[position] == ' ')
+                lastSpace = position;
+            position++;
         }
     }
 
-
+    std::cout << pStart << std::endl;
 
 
     /*

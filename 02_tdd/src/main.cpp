@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     //std::cout << "Podaj tekst: " << std::endl;
     //std::cin >> pBuffer;
 
-    std::cout << TextWrapperMain.wrapper("ABCDEFGH", 1) << std::endl;
+    std::cout << TextWrapperMain.wrapper("ABCDEFGH", 3) << std::endl;
 
     return 0;
 }
