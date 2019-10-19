@@ -26,7 +26,18 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 
     const char* pStart = buffer;
 
-    int lenghtBuffer = strlen(buffer);
+    int position = 0;
+    int lastSpace = 0;
+
+    while(pStart[position] != '\0')
+    {
+        int isEOL = (pStart[position] == '\n');
+        if (isEOL || position == nSize )
+        {
+            
+        }
+    }
+
 
 
 
