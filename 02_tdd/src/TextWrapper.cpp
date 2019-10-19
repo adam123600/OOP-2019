@@ -24,10 +24,13 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 {
     //return "ab";
 
-    char* pStart = (char*)buffer;
+    const char* pStart = buffer;
 
     int lenghtBuffer = strlen(buffer);
 
+
+
+    /*
     while( *pStart != '\0')
     {
         if ( nSize < 1)
@@ -57,11 +60,13 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
             {
                 std::cout << *pStart;
                 pStart++;
-                exit(1);
             }
+            //exit(1);
         }
 
         pStart++;
     }
     std::cout << std::endl;
+
+     */
 }

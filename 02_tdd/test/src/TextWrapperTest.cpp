@@ -19,7 +19,12 @@ TEST(TextWrapper, HasColumnsGetter2)
 
 TEST(TextWrapper, CheckMethodWrapper1)
 {
-    ASSERT_EQ("", TextWrapper::wrapper("", 1));
+    auto wrapper = TextWrapper{};
+
+   // ASSERT_EQ("", TextWrapper::wrapper("", 1));
+   //ASSERT_EQ("A\nS\nD", wrapper.wrapper("ASD", 1));
+   //EXPECT_EQ("A\nS\nD", wrapper.wrapper("ASD", 1));
+   EXPECT_EQ("A\nS\nD", TextWrapper::wrapper("ASD", 1));
 }
 
 TEST(TextWrapper, CheckMethodWrapper2)
