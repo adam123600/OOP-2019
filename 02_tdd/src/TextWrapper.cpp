@@ -1,7 +1,7 @@
 #include "TextWrapper.h"
 
 
-int TextWrapper::columns(std::string inputString, int nSize) const
+std::string TextWrapper::columns(std::string inputString, int nSize) const
 {
-    return 10;
+    return "Test metody";
 }
