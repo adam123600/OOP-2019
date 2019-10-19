@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Dummy.h"
 
+
 int main(int argc, char* argv[])
 {
     auto dummy = Dummy{};

@@ -21,5 +21,5 @@ TEST(TextWrapper, Test1)
 {
     auto wrapper = TextWrapper{};
 
-    EXPECT_EQ("", )
+    EXPECT_EQ("",)
 }
