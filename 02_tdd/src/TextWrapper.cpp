@@ -43,16 +43,19 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 
         else if ( nSize == 2)
         {
-            int halfL = lenghtBuffer / 2;
+            int halfL = (lenghtBuffer / 2) + 1;
             while ( halfL )
             {
-                std::cout << *pStart << std::endl;
+                std::cout << *pStart;
                 pStart++;
                 halfL--;
             }
+
+            std::cout << std::endl;
+
             while( *pStart != '\0' )
             {
-                std::cout << *pStart << std::endl;
+                std::cout << *pStart;
                 pStart++;
                 exit(1);
             }
