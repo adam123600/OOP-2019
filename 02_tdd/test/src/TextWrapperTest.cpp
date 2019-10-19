@@ -19,10 +19,16 @@ TEST(TextWrapper, HasColumnsGetter2)
 
 TEST(TextWrapper, CheckMethodWrapper1)
 {
-    auto wrapper = TextWrapper{};
-
-    ASSERT_EQ("acb", TextWrapper::wrapper("ab", 5));
+    ASSERT_EQ("", TextWrapper::wrapper("", 5));
 }
+
+TEST(TextWrapper, CheckMethodWrapper2)
+{
+    ASSERT_EQ("a\nb", TextWrapper::wrapper("ab", 2));
+}
+
+
+
 
 
 /*
