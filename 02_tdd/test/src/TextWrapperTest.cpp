@@ -42,20 +42,6 @@ TEST(TextWrapper, CheckMethodWrapper5)
     ASSERT_EQ("ab\ncd", TextWrapper::wrapper("abcd", 2));
 }
 
-
-/*
-TEST(TextWrapper, Test1)
-{
-  //  auto wrapper = TextWrapper{};
-    //EXPECT_EQ(5, TextWrapper::columns("ASD", 5));
-    //ASSERT_EQ(5, 10);
-
-    //ASSERT_STREQ(" ", TextWrapper::columns("ASD", 5));
-
-    EXPECT_STRCASEEQ("ASD", TextWrapper::columns("ASD", 5));
-}
-*/
-
 TEST(TextWrapper, HasColumnsGetter) {
 
 auto wrapper = TextWrapper{};

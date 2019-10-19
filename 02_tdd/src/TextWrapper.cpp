@@ -18,7 +18,19 @@ int TextWrapper::columns(int nSize) const {
         return nSize;
 }
 
-std::__cxx11::string TextWrapper::wrapper(const char *, int nSize)
+std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 {
-    return "ab";
+    //return "ab";
+
+    char* pStart = (char*)buffer;
+
+    while( *pStart != '\0')
+    {
+        if ( nSize == 1)
+        {
+            std::cout << *pStart;
+        }
+        pStart++;
+    }
+    std::cout << std::endl;
 }
