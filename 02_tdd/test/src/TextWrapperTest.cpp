@@ -19,16 +19,28 @@ TEST(TextWrapper, HasColumnsGetter2)
 
 TEST(TextWrapper, CheckMethodWrapper1)
 {
-    ASSERT_EQ("", TextWrapper::wrapper("", 5));
+    ASSERT_EQ("", TextWrapper::wrapper("", 1));
 }
 
 TEST(TextWrapper, CheckMethodWrapper2)
 {
-    ASSERT_EQ("a\nb", TextWrapper::wrapper("ab", 2));
+    ASSERT_EQ("a", TextWrapper::wrapper("a", 1));
 }
 
+TEST(TextWrapper, CheckMethodWrapper3)
+{
+    ASSERT_EQ("a\nb\nc", TextWrapper::wrapper("abc", 1));
+}
 
+TEST(TextWrapper, CheckMethodWrapper4)
+{
+    ASSERT_EQ("ab\nc", TextWrapper::wrapper("abc", 2));
+}
 
+TEST(TextWrapper, CheckMethodWrapper5)
+{
+    ASSERT_EQ("ab\ncd", TextWrapper::wrapper("abcd", 2));
+}
 
 
 /*
