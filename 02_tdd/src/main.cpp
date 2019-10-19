@@ -24,5 +24,7 @@ int main(int argc, char* argv[])
     std::cout << "Podaj tekst: " << std::endl;
     std::cin >> pBuffer;
 
+    std::cout << TextWrapperMain.wrapper(pBuffer, liczba) << std::endl;
+
     return 0;
 }

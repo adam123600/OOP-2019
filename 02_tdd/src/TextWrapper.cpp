@@ -28,7 +28,7 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
     {
         if ( nSize == 1)
         {
-            std::cout << *pStart;
+            std::cout << *pStart << std::endl;
         }
         pStart++;
     }
