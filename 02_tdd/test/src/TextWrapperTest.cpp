@@ -18,9 +18,16 @@ TEST(TextWrapper, HasColumnsGetter2)
 
 TEST(TextWrapper, HasColumnsGetter) {
 
-auto wrapper = TextWrapper{};
+    auto wrapper = TextWrapper{};
 
-EXPECT_EQ(0, wrapper.columns(0));
+    EXPECT_EQ(0, wrapper.columns(0));
+}
+
+TEST(TextWrapper, CheckMethodWrapper1)
+{
+    auto wrapper = TextWrapper{};
+
+    EXPECT_STRCASEEQ("ab", TextWrapper::wrapper("ab", 5));
 }
 
 
