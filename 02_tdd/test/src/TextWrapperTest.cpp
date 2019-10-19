@@ -8,13 +8,20 @@ TEST(TextWrapper, CreateInstance) {
     auto wrapper = TextWrapper{};
 }
 
-TEST(TextWrapper, HasColumnsGetter) {
 
+TEST(TextWrapper, HasColumnsGetter2)
+{
     auto wrapper = TextWrapper{};
 
-    EXPECT_EQ(10, wrapper.columns(10));
+    EXPECT_EQ(1, wrapper.columns(1));
 }
 
+TEST(TextWrapper, HasColumnsGetter) {
+
+auto wrapper = TextWrapper{};
+
+EXPECT_EQ(0, wrapper.columns(0));
+}
 
 
 /*
