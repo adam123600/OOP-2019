@@ -14,7 +14,7 @@ TEST(TextWrapper, HasColumnsGetter) {
 
     EXPECT_EQ(10, wrapper.columns());
 }
-*
+
 
 
 /*
