@@ -18,7 +18,7 @@ int TextWrapper::columns(int nSize) const {
         return nSize;
 }
 
-std::string TextWrapper::wrapper(const char *, int nSize)
+std::__cxx11::string TextWrapper::wrapper(const char *, int nSize)
 {
     return "ab";
 }

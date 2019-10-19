@@ -16,18 +16,12 @@ TEST(TextWrapper, HasColumnsGetter2)
     EXPECT_EQ(1, wrapper.columns(1));
 }
 
-TEST(TextWrapper, HasColumnsGetter) {
-
-    auto wrapper = TextWrapper{};
-
-    EXPECT_EQ(0, wrapper.columns(0));
-}
 
 TEST(TextWrapper, CheckMethodWrapper1)
 {
     auto wrapper = TextWrapper{};
 
-    EXPECT_STRCASEEQ("ab", TextWrapper::wrapper("ab", 5));
+    ASSERT_EQ("acb", TextWrapper::wrapper("ab", 5));
 }
 
 
@@ -43,3 +37,10 @@ TEST(TextWrapper, Test1)
     EXPECT_STRCASEEQ("ASD", TextWrapper::columns("ASD", 5));
 }
 */
+
+TEST(TextWrapper, HasColumnsGetter) {
+
+auto wrapper = TextWrapper{};
+
+EXPECT_EQ(0, wrapper.columns(0));
+}

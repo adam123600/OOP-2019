@@ -11,5 +11,5 @@ public:
 
     //static std::string columns(std::string inputString, int nSize);
     int columns(int nSize) const;
-    static std::string wrapper(const char *, int nSize);
+    static std::__cxx11::string wrapper(const char *, int nSize);
 };
