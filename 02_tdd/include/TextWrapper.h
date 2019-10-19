@@ -9,5 +9,5 @@ class TextWrapper {
 
 public:
 
-    std::string columns(std::string inputString, int nSize) const;
+    static std::string columns(std::string inputString, int nSize);
 };
