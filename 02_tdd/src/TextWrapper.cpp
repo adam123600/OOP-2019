@@ -25,6 +25,7 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
     //return "ab";
 
     const char* pStart = buffer;
+    char* pOut = (char*)calloc(100, sizeof(char));
     int strLength = std::strlen(buffer);
 
     int position = 0;
@@ -58,5 +59,7 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
             position++;
         }
     }
-    std::cout << pStart << std::endl;
+    //std::cout << pStart << std::endl;
+    memcpy(pOut, pStart, strlen(pStart) + 1);
+    return pOut;
 }
