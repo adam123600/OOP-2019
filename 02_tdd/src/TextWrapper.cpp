@@ -1,7 +1,7 @@
 #include "TextWrapper.h"
 #include <iostream>
 //#include <stdio.h>
-#include <string.h>
+#include <cstring>
 /*
 std::string TextWrapper::columns(std::string inputString, int nSize)
 {
@@ -25,7 +25,8 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
     //return "ab";
 
     const char* pStart = buffer;
-
+    int strLength = std::strlen(buffer);
+    char* strOutput = (char*)calloc(strLength + 1, sizeof(char));
     int position = 0;
     int lastSpace = 0;
 
@@ -60,44 +61,4 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 
     std::cout << pStart << std::endl;
 
-
-    /*
-    while( *pStart != '\0')
-    {
-        if ( nSize < 1)
-        {
-            std::cout << "Podano nieodpowiednia liczbe!" << std::endl;
-            exit(0);
-        }
-
-        if ( nSize == 1)
-        {
-            std::cout << *pStart << std::endl;
-        }
-
-        else if ( nSize == 2)
-        {
-            int halfL = (lenghtBuffer / 2) + 1;
-            while ( halfL )
-            {
-                std::cout << *pStart;
-                pStart++;
-                halfL--;
-            }
-
-            std::cout << std::endl;
-
-            while( *pStart != '\0' )
-            {
-                std::cout << *pStart;
-                pStart++;
-            }
-            //exit(1);
-        }
-
-        pStart++;
-    }
-    std::cout << std::endl;
-
-     */
 }
