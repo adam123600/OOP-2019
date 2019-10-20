@@ -26,7 +26,7 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 
     const char* pStart = buffer;
     int strLength = std::strlen(buffer);
-    char* strOutput = (char*)calloc(strLength + 1, sizeof(char));
+
     int position = 0;
     int lastSpace = 0;
 
@@ -39,7 +39,7 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
 
 
             while (*pStart != 0 && lastSpace-- > 0) {
-                std::cout << *pStart++ << std::endl;
+                std::cout << *pStart++; // << std::endl;
             }
             std::cout << std::endl;
 
@@ -58,7 +58,5 @@ std::__cxx11::string TextWrapper::wrapper(const char * buffer, int nSize)
             position++;
         }
     }
-
     std::cout << pStart << std::endl;
-
 }
