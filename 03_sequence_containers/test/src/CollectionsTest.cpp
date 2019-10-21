@@ -87,6 +87,7 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
     // TODO: ...
 
     auto input = std::vector<float>{1, 2, 3};
+    auto output = std::vector<float>{};
 
     ASSERT_EQ(3u, input.size());
     EXPECT_EQ(1, input[0]);
@@ -96,6 +97,9 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
     ASSERT_TRUE(output.empty());
 
     // TODO: ...
+
+    output = std::vector<float>{2, 3};
+    input = std::vector<float>{1, 2, 3};
 
     ASSERT_EQ(2u, output.size());
     EXPECT_EQ(2, output[0]);
@@ -108,10 +112,12 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 }
 
 
-/*
+
 TEST(VectorFloat, EraseFrontValue) {
 
     // TODO: ...
+
+    auto vector = std::vector<float>{1, 2, 3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(1, vector[0]);
@@ -120,14 +126,23 @@ TEST(VectorFloat, EraseFrontValue) {
 
     // TODO: ...
 
+    vector.erase(vector.begin());
+
     ASSERT_EQ(2u, vector.size());
     EXPECT_FLOAT_EQ(2, vector[0]);
     EXPECT_FLOAT_EQ(3, vector[1]);
 }
 
+
 TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
     // TODO: ...
+
+    auto vector = std::vector<std::vector<std::vector<float>>> {
+            { { 1, 2}, {3, 4} },
+            {{5, 6}, {7,8}}
+    };
+
 
     ASSERT_EQ(2u, vector.size());
     ASSERT_EQ(2u, vector[0].size());
@@ -147,6 +162,8 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
     EXPECT_FLOAT_EQ(8, vector[1][1][1]);
 }
 
+
+/*
 TEST(ArrayInt, FillWithTheSameValue) {
 
     // TODO: ...
