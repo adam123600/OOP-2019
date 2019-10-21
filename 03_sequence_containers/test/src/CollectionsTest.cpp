@@ -6,26 +6,34 @@ TEST(VectorInt, CreateInitialized) {
 
     // TODO: ...
 
+    auto vector = std::vector<int>{1,2,3};
+
     ASSERT_EQ(3u, vector.size());
     EXPECT_EQ(1, vector[0]);
     EXPECT_EQ(2, vector[1]);
     EXPECT_EQ(3, vector[2]);
 }
 
+
 TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
     // TODO: ...
+
+    auto vector = std::vector<double>{};
 
     ASSERT_EQ(0u, vector.size());
     ASSERT_TRUE(vector.empty());
 
     // TODO: ...
 
+
     ASSERT_EQ(3u, vector.size());
     EXPECT_DOUBLE_EQ(11, vector[0]);
     EXPECT_DOUBLE_EQ(13, vector[1]);
     EXPECT_DOUBLE_EQ(17, vector[2]);
 }
+
+/*
 
 TEST(VectorFloat, CreateUsingInitializerList) {
 
@@ -325,3 +333,4 @@ TEST(PriorityQueueChar, PushAndPop) {
 
     ASSERT_TRUE(priority_queue.empty());
 }
+*/
