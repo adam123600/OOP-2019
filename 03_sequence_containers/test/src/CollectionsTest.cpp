@@ -26,6 +26,7 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
     // TODO: ...
 
+    vector = std::vector<double>{11, 13, 17};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_DOUBLE_EQ(11, vector[0]);
@@ -33,11 +34,13 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
     EXPECT_DOUBLE_EQ(17, vector[2]);
 }
 
-/*
+
 
 TEST(VectorFloat, CreateUsingInitializerList) {
 
     // TODO: ...
+
+    auto vector = std::vector<float>{10, 20, 30};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(10, vector[0]);
@@ -45,9 +48,12 @@ TEST(VectorFloat, CreateUsingInitializerList) {
     EXPECT_FLOAT_EQ(30, vector[2]);
 }
 
+
 TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
     // TODO: ...
+
+    auto vector = std::vector<int>{1,2,3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(1, vector[0]);
@@ -56,6 +62,8 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
     EXPECT_EQ(vector.capacity(), vector.size());
 
     // TODO: ...
+
+    vector = std::vector<int>{4, 1, 2, 3};
 
     ASSERT_EQ(4u, vector.size());
     EXPECT_FLOAT_EQ(4, vector[0]);
@@ -66,13 +74,19 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
     // TODO: ...
 
+    vector = std::vector<int>{4, 1, 2, 3};
+
     ASSERT_EQ(4u, vector.size());
     EXPECT_EQ(vector.capacity(), vector.size());
 }
 
+
+
 TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
     // TODO: ...
+
+    auto input = std::vector<float>{1, 2, 3};
 
     ASSERT_EQ(3u, input.size());
     EXPECT_EQ(1, input[0]);
@@ -93,6 +107,8 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
     EXPECT_EQ(3, input[2]);
 }
 
+
+/*
 TEST(VectorFloat, EraseFrontValue) {
 
     // TODO: ...
