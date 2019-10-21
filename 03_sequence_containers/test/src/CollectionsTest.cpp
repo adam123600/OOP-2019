@@ -163,10 +163,12 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 }
 
 
-/*
+
 TEST(ArrayInt, FillWithTheSameValue) {
 
     // TODO: ...
+
+    auto array = std::array<int, 1000>{};
 
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(0, array[i]);
@@ -174,14 +176,20 @@ TEST(ArrayInt, FillWithTheSameValue) {
 
     // TODO: ...
 
+    for ( int i = 0; i < 1000; i++)
+        array[i] = 7;
+
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(7, array[i]);
     }
 }
 
+
 TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
     // TODO: ...
+
+    std::array<int, 4> array = {1, 2, 3, 4};
 
     static_assert(array.size() == 4, "Compilation error: wrong array size");
 
@@ -191,9 +199,13 @@ TEST(ArrayInt, SizeDefinedAtCompileTime) {
     ASSERT_EQ(4u, array[3]);
 }
 
+
+
 TEST(ArrayInt, Sort) {
 
     // TODO: ...
+
+    std::array<int, 5> array = {5, 3, 4, 1, 2};
 
     EXPECT_EQ(5, array[0]);
     EXPECT_EQ(3, array[1]);
@@ -203,6 +215,9 @@ TEST(ArrayInt, Sort) {
 
     // TODO: ...
 
+    std::sort(array.begin(), array.end());
+
+
     EXPECT_EQ(1, array[0]);
     EXPECT_EQ(2, array[1]);
     EXPECT_EQ(3, array[2]);
@@ -210,9 +225,12 @@ TEST(ArrayInt, Sort) {
     EXPECT_EQ(5, array[4]);
 }
 
+
 TEST(ArrayChar, CreateCopy) {
 
     // TODO: ...
+
+    std::array<char, 5> arrayIn = {'a', 'b', 'c', 'd', '\0'};
 
     ASSERT_EQ(5u, arrayIn.size());
     ASSERT_EQ('a', arrayIn[0]);
@@ -224,28 +242,45 @@ TEST(ArrayChar, CreateCopy) {
 
     // TODO: ...
 
+    std::array<char, 5> arrayOut = {};
+    arrayOut = arrayIn;
+
     ASSERT_EQ(5u, arrayIn.size());
     EXPECT_STREQ("abcd", arrayIn.data());
     ASSERT_EQ(5u, arrayOut.size());
     EXPECT_STREQ("abcd", arrayOut.data());
+
 }
+
+
 
 TEST(ListFloat, Sort) {
 
     // TODO: ...
+
+    std::list<float> list = { 1, 5, 4};
+    list.resize(1000);
+
 
     ASSERT_EQ(1000, list.size());
     EXPECT_FALSE(std::is_sorted(list.begin(), list.end()));
 
     // TODO: ...
 
+    list.sort();
+
     ASSERT_EQ(1000, list.size());
     EXPECT_TRUE(std::is_sorted(list.begin(), list.end()));
 }
 
+
+
 TEST(ListInt, MergeSortedLists) {
 
     // TODO: ...
+
+    std::list<int> a = {1, 3, 5};
+    std::list<int> b = {2, 4, 6};
 
     auto iter = a.begin();
     EXPECT_EQ(1, *(iter++));
@@ -260,6 +295,8 @@ TEST(ListInt, MergeSortedLists) {
 
     // TODO: ...
 
+    a.merge(b);
+
     EXPECT_EQ(0, b.size());
     EXPECT_EQ(6, a.size());
     iter = a.begin();
@@ -272,9 +309,13 @@ TEST(ListInt, MergeSortedLists) {
     EXPECT_EQ(a.end(), iter);
 }
 
+
+
 TEST(ForwardListFloat, InsertElementAfterIndex) {
 
     // TODO: ...
+
+    std::forward_list<float> forwardList = {1, 2, 3, 4};
 
     auto iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
@@ -285,6 +326,8 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
 
     // TODO: ...
 
+    //forwardList.insert_after(forwardList.begin() + 2, 10);
+
     iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
     EXPECT_EQ(2, *(iter++));
@@ -294,6 +337,7 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
     EXPECT_EQ(forwardList.end(), iter);
 }
 
+/*
 TEST(DequeInt, RemoveFirstElement) {
 
     // TODO: ...
