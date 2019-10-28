@@ -233,19 +233,18 @@ TEST(SetValue, CustomTypeAndComparator) {
     struct Comparator {
         // TODO: ....
 
-        bool operator()(const Value & lhs, const Value& rhs) const
+        bool operator()(const Value & a, const Value& b) const
         {
-            if ( (lhs.a*lhs.a + lhs.b * lhs.b) <  (rhs.a*rhs.a + rhs.b * rhs.b))
-                return true;
-            else
-                return false;
+            if ( a.a < b.a) return true;
+            else if ( a.b < b.b ) return true;
+            else return false;
         }
 
     };
 
     // TODO: ....
 
-    std::set<int, Comparator> set{};
+    std::set<Value, Comparator> set;
 
     ASSERT_TRUE(set.empty());
 
