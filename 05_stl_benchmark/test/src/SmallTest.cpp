@@ -146,7 +146,8 @@ TEST(SmallTest, lessOperatorTest3)
     Small b{};
     b.data[0] = '9';
 
-    EXPECT_EQ(true, a.operator<(b));
+    //EXPECT_EQ(true, a.operator<(b));
+    EXPECT_EQ(true, a<(b));
 }
 
 TEST(SmallTest, lessOperatorTest4)
@@ -156,10 +157,25 @@ TEST(SmallTest, lessOperatorTest4)
     Small b{};
     b.data[0] = '9';
 
-    EXPECT_EQ(false, b.operator<(a));
+    //EXPECT_EQ(false, b.operator<(a));
+    EXPECT_EQ(false, b<(a));
 }
 
 TEST(SmallTest, hashTest1)
 {
-    
+    Small a{};
+    a.data[0] = 'a';
+
+    //auto wynik = std::hash<Small>();
+
+    //EXPECT_EQ('a', wynik(a));
+    EXPECT_EQ('a', std::hash<Small>()(a));
+}
+
+TEST(SmallTest, hashTest2)
+{
+    Small a{};
+    a.data[0] = 'i';
+
+    EXPECT_EQ('i', std::hash<Small>()(a));
 }
