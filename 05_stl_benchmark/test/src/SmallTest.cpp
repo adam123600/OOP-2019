@@ -179,3 +179,11 @@ TEST(SmallTest, hashTest2)
 
     EXPECT_EQ('i', std::hash<Small>()(a));
 }
+
+TEST(SmallTest, hashTest3)
+{
+    Small a{};
+    a.data[0] = '9';
+
+    EXPECT_EQ('9', std::hash<Small>()(a));
+}
