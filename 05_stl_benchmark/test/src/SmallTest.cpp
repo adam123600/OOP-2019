@@ -113,3 +113,53 @@ TEST(SmallTest, Clear) {
 
 
 // TODO: Add tests for your operators implementation!
+
+TEST(SmallTest, is1BSize)
+{
+    EXPECT_EQ(1, sizeof(Small));
+}
+
+TEST(SmallTest, lessOperatorTest1)
+{
+    Small a{};
+    a.data[0] = 'a';
+    Small b{};
+    b.data[0] = 'b';
+
+    EXPECT_EQ(true, a.operator<(b));
+}
+
+TEST(SmallTest, lessOperatorTest2)
+{
+    Small a{};
+    a.data[0] = 'a';
+    Small b{};
+    b.data[0] = '9';
+
+    EXPECT_EQ(false, a.operator<(b));
+}
+
+TEST(SmallTest, lessOperatorTest3)
+{
+    Small a{};
+    a.data[0] = '5';
+    Small b{};
+    b.data[0] = '9';
+
+    EXPECT_EQ(true, a.operator<(b));
+}
+
+TEST(SmallTest, lessOperatorTest4)
+{
+    Small a{};
+    a.data[0] = '5';
+    Small b{};
+    b.data[0] = '9';
+
+    EXPECT_EQ(false, b.operator<(a));
+}
+
+TEST(SmallTest, hashTest1)
+{
+    
+}
