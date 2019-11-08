@@ -34,7 +34,7 @@ struct Small {
         // TODO: Implement me!
         if (this->data[0] == rhs.data[0])
             return true;
-        return true;
+        return false;
     }
 };
 

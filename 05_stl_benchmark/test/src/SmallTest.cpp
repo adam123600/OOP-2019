@@ -161,6 +161,26 @@ TEST(SmallTest, lessOperatorTest4)
     EXPECT_EQ(false, b<(a));
 }
 
+TEST(SmallTest, isEqual1)
+{
+    Small a{};
+    a.data[0] = 'b';
+    Small b{};
+    b.data[0] = 'b';
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(SmallTest, isEqual2)
+{
+    Small a{};
+    a.data[0] = 'a';
+    Small b{};
+    b.data[0] = 'b';
+
+    EXPECT_EQ(false, a==b);
+}
+
 TEST(SmallTest, hashTest1)
 {
     Small a{};
