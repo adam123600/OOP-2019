@@ -106,3 +106,115 @@ TEST(MediumTest, Clear) {
 }
 
 // TODO: Add tests for your operators implementation!
+
+TEST(MediumTest, is1024Byte)
+{
+    EXPECT_EQ(1024, sizeof(Medium));
+}
+
+TEST(MediumTest, lessOperator1True)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 1;
+    a.data[1] = 2;
+    a.data[2] = 3;
+
+    b.data[0] = 1;
+    b.data[1] = 2;
+    b.data[2] = 4;
+
+    EXPECT_EQ(true, a<b);
+
+}
+
+TEST(MediumTest, lessOperator2True)
+{
+    Medium a{};
+    Medium b{};
+
+    for(int i = 0; i < 20; i++)
+        a.data[i] = i;
+    for(int i = 0; i < 20; i++)
+        b.data[i] = 2*i;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(MediumTest, lessOperator3True)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = -15;
+    b.data[0] = -10;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(MediumTest, lessOperator4True)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 9;
+    a.data[1] = 9;
+    a.data[2] = 8;
+
+    b.data[0] = 9;
+    b.data[1] = 9;
+    b.data[2] = 9;
+
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(MediumTest, lessOperator5True)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = -10;
+    b.data[0] = 9999999;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(MediumTest, lessOperator6False)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 10;
+    b.data[0] = 0;
+
+    EXPECT_EQ(false, a<b);
+}
+
+TEST(MediumTest, lessOperator7False)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 0;
+    b.data[0] = -1;
+
+    EXPECT_EQ(false, a<b);
+}
+
+TEST(MediumTest, lessOperator8False)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 9;
+    a.data[1] = 9;
+    a.data[2] = 9;
+
+    b.data[0] = -9;
+    b.data[1] = 9;
+    b.data[2] = 9;
+
+    EXPECT_EQ(false, a<b);
+}

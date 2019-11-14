@@ -46,7 +46,6 @@ namespace std {
             // TODO: Implement me!
             return d.data[0];
 
-            return 0;
         }
     };
 }
