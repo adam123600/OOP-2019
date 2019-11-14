@@ -110,3 +110,60 @@ TEST(LargeTest, Clear) {
 
 
 // TODO: Add tests for your operators implementation!
+
+TEST(LargeTest, lessOperatorTrue1)
+{
+    Large a{};
+    a.data[0] = 1e-18;
+
+    Large b{};
+    b.data[0] = 2e-16;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(LargeTest, lessOperatorTrue2)
+{
+    Large a{};
+    a.data[0] = 12e-9;
+    a.data[1] = 13e-2;
+
+    Large b{};
+    b.data[0] = 13e-9;
+    b.data[1] = 14e-2;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(LargeTest, lessOperatorTrue3)
+{
+    Large a{};
+    a.data[0] = 1e-19;
+
+    Large b{};
+    b.data[0] = 1e19;
+
+    EXPECT_EQ(true, a<b);
+}
+
+TEST(LargeTest, lessOperatorFalse1)
+{
+    Large a{};
+    a.data[0] = 2e-19;
+
+    Large b{};
+    b.data[0] = 1e-19;
+
+    EXPECT_EQ(false, a<b);
+}
+
+TEST(LargeTest, lessOperatorFalse2)
+{
+    Large a{};
+    a.data[0] = 15e10;
+
+    Large b{};
+    b.data[0] = 14e10;
+
+    EXPECT_EQ(false, a<b);
+}
