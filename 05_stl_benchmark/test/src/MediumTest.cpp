@@ -112,7 +112,7 @@ TEST(MediumTest, is1024Byte)
     EXPECT_EQ(1024, sizeof(Medium));
 }
 
-TEST(MediumTest, lessOperator1True)
+TEST(MediumTest, lessOperatorTrue1)
 {
     Medium a{};
     Medium b{};
@@ -129,7 +129,7 @@ TEST(MediumTest, lessOperator1True)
 
 }
 
-TEST(MediumTest, lessOperator2True)
+TEST(MediumTest, lessOperatorTrue2)
 {
     Medium a{};
     Medium b{};
@@ -142,7 +142,7 @@ TEST(MediumTest, lessOperator2True)
     EXPECT_EQ(true, a<b);
 }
 
-TEST(MediumTest, lessOperator3True)
+TEST(MediumTest, lessOperatorTrue3)
 {
     Medium a{};
     Medium b{};
@@ -153,7 +153,7 @@ TEST(MediumTest, lessOperator3True)
     EXPECT_EQ(true, a<b);
 }
 
-TEST(MediumTest, lessOperator4True)
+TEST(MediumTest, lessOperatorTrue4)
 {
     Medium a{};
     Medium b{};
@@ -170,7 +170,7 @@ TEST(MediumTest, lessOperator4True)
     EXPECT_EQ(true, a<b);
 }
 
-TEST(MediumTest, lessOperator5True)
+TEST(MediumTest, lessOperatorTrue5)
 {
     Medium a{};
     Medium b{};
@@ -181,7 +181,7 @@ TEST(MediumTest, lessOperator5True)
     EXPECT_EQ(true, a<b);
 }
 
-TEST(MediumTest, lessOperator6False)
+TEST(MediumTest, lessOperatorFalse1)
 {
     Medium a{};
     Medium b{};
@@ -192,7 +192,7 @@ TEST(MediumTest, lessOperator6False)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperator7False)
+TEST(MediumTest, lessOperatorFalse2)
 {
     Medium a{};
     Medium b{};
@@ -203,7 +203,7 @@ TEST(MediumTest, lessOperator7False)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperator8False)
+TEST(MediumTest, lessOperatorFalse4)
 {
     Medium a{};
     Medium b{};
@@ -217,4 +217,78 @@ TEST(MediumTest, lessOperator8False)
     b.data[2] = 9;
 
     EXPECT_EQ(false, a<b);
+}
+
+TEST(MediumTest, isEqualTrue1)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 1;
+    b.data[0] = 1;
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(MediumTest, isEqualTrue2)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 9;
+    a.data[1] = 9;
+    a.data[2] = 9;
+
+    b.data[0] = 9;
+    b.data[1] = 9;
+    b.data[2] = 9;
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(MediumTest, isEqualTrue3)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = -9;
+    a.data[1] = 9;
+
+    b.data[0] = -9;
+    b.data[1] = 9;
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(MediumTest, isEqualFalse1)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = -1;
+    b.data[0] = 1;
+
+    EXPECT_EQ(false, a==b);
+}
+
+TEST(MediumTest, isEqualFalse2)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 9;
+    b.data[0] = -9;
+
+    EXPECT_EQ(false, a==b);
+}
+
+TEST(MediumTest, isEqualFalse3)
+{
+    Medium a{};
+    Medium b{};
+
+    a.data[0] = 100;
+    b.data[0] = 99;
+
+    EXPECT_EQ(false, a==b);
 }
