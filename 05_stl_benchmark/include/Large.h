@@ -41,6 +41,15 @@ struct Large {
     bool operator==(const Large &rhs) const {
 
         // TODO: Implement me!
+        const double EPS = 0.0000000000000000000000000000001;  // dokladnosc
+        int i = 0;
+
+        while( i < SIZE )
+        {
+            if( fabs(this->data[i] - rhs.data[i]) > EPS )
+                return false;
+            i++;
+        }
         return true;
     }
 };
@@ -51,7 +60,12 @@ namespace std {
         std::size_t operator()(const Large &d) const {
 
             // TODO: Implement me!
-            return 0;
+            double result = 0;
+
+            for(int i = 0; i < d.SIZE; i++)
+                result += (69*((double)((i+1)*69)/49)*d.data[i]);
+
+            return result;
         }
     };
 }

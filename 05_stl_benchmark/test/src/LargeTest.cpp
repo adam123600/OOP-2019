@@ -167,3 +167,65 @@ TEST(LargeTest, lessOperatorFalse2)
 
     EXPECT_EQ(false, a<b);
 }
+
+TEST(LargeTest, isEqualTrue1)
+{
+    Large a{};
+    a.data[0] = 1e-19;
+
+    Large b{};
+    b.data[0] = 1e-19;
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(LargeTest, isEqualTrue2)
+{
+    Large a{};
+    a.data[0] = 1e-29;
+
+    Large b{};
+    b.data[0] = 1e-29;
+
+    EXPECT_EQ(true, a==b);
+}
+
+TEST(LargeTest, isEqualFalse1)
+{
+    Large a{};
+    a.data[0] = 1e-29;
+
+    Large b{};
+    b.data[0] = 2e-29;
+
+    EXPECT_EQ(false, a==b);
+}
+
+TEST(LargeTest, hashTest1)
+{
+    Large a{};
+    a.data[0] = 1e-29;
+    double resultA = std::hash<Large>()(a);
+
+    Large b{};
+    b.data[0] = 1e-29;
+    double resultB = std::hash<Large>()(b);
+
+    EXPECT_EQ(true, resultA == resultB );
+}
+
+TEST(LargeTest, hashTest2)
+{
+    Large a{};
+    a.data[0] = 1e9;
+    double resultA = std::hash<Large>()(a);
+
+    Large b{};
+    b.data[0] = 1.21e9;
+    double resultB = std::hash<Large>()(b);
+
+    printf("ResultA: %.40f\n", resultA);
+    printf("ResultB: %.40f\n", resultB);
+
+    EXPECT_EQ(false, resultA == resultB);
+}
