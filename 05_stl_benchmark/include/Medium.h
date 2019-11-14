@@ -58,7 +58,17 @@ namespace std {
         std::size_t operator()(const Medium &d) const {
 
             // TODO: Implement me!
-            return 0;
+
+            int result = 0;
+
+            for(int i = 0; i < d.SIZE; i++)
+            {
+                result += 69*(((i+1)*69)/49)*d.data[i];
+            }
+
+            printf("RESULT %d:", result);
+
+            return result;
         }
     };
 }

@@ -292,3 +292,44 @@ TEST(MediumTest, isEqualFalse3)
 
     EXPECT_EQ(false, a==b);
 }
+
+TEST(MediumTest, hashTest1)
+{
+    Medium a{};
+    a.data[0] = 11;
+    a.data[1] = 10;
+    int result = std::hash<Medium>()(a);
+
+    EXPECT_EQ(2139, result);
+}
+
+TEST(MediumTest, hashTest2)
+{
+    Medium a{};
+    a.data[0] = 11;
+    a.data[1] = 10;
+    int resultA = std::hash<Medium>()(a);
+
+    Medium b{};
+    b.data[0] = 11;
+    b.data[1] = 10;
+    int resultB = std::hash<Medium>()(b);
+
+    EXPECT_EQ(true, resultA==resultB);
+}
+
+TEST(MediumTest, hashTest3)
+{
+    Medium a{};
+    a.data[0] = 12;
+    a.data[1] = 150;
+    int resultA = std::hash<Medium>()(a);
+
+    Medium b{};
+    b.data[0] = 150;
+    b.data[1] = 12;
+    int resultB = std::hash<Medium>()(b);
+
+    EXPECT_EQ(false, resultA==resultB);
+
+}
