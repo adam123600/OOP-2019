@@ -15,13 +15,10 @@ static void LargeBenchLessOperator(benchmark::State& state)
     }
 
     for ( auto AAA : state )
-    {
         DoNotOptimize(a<b);
-    }
 
     state.SetComplexityN(state.range(0));
 }
-
 BENCHMARK(LargeBenchLessOperator)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
 
 
@@ -37,12 +34,10 @@ static void LargeBenchEqualOperator(benchmark::State& state)
     }
 
     for ( auto AAA : state )
-    {
         DoNotOptimize(a==b);
-    }
+
     state.SetComplexityN(state.range(0));
 }
-
 BENCHMARK(LargeBenchEqualOperator)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
 
 
@@ -51,17 +46,11 @@ static void LargeBenchHash(benchmark::State& state)
     Large a{};
 
     for(int i = 0; i < a.SIZE; i++ )
-    {
         a.data[i] = i;
-    }
 
     for ( auto AAA : state )
-    {
-        auto result = std::hash<Large>()(a);
-        DoNotOptimize(result);
-    }
+        DoNotOptimize(std::hash<Large>()(a));
 
     state.SetComplexityN(state.range(0));
 }
-
 BENCHMARK(LargeBenchHash)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();

@@ -40,17 +40,6 @@ struct Large {
     bool operator==(const Large &rhs) const {
 
         // TODO: Implement me!
-     /*   const double EPS = 0.0000000000000000000000000000001;  // dokladnosc
-        int i = 0;
-
-        while( i < SIZE )
-        {
-            if( fabs(this->data[i] - rhs.data[i]) >= EPS )
-                return false;
-            i++;
-        }
-        return true;
-        */
 
         int i = 0;
 
@@ -59,7 +48,6 @@ struct Large {
             if ( this->data[i] != rhs.data[i] )
                 return false;
         }
-
         return true;
     }
 };

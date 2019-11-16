@@ -16,10 +16,8 @@ static void MediumBenchLessOperator(benchmark::State& state)
     }
 
     for( auto AAA : state )
-    {
-        auto result = a<b;
-        DoNotOptimize(result);
-    }
+        DoNotOptimize(a<b);
+
     state.SetComplexityN(state.range(0));
 }
 BENCHMARK(MediumBenchLessOperator)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
@@ -36,9 +34,7 @@ static void MediumBenchEqualOperator(benchmark::State& state)
     }
 
     for( auto AAA : state )
-    {
         DoNotOptimize(a==b);
-    }
 
     state.SetComplexityN(state.range(0));
 }
@@ -52,10 +48,8 @@ static void MediumBenchHash(benchmark::State& state)
         a.data[i] = i;
 
     for ( auto AAA : state )
-    {
-        auto result = std::hash<Medium>()(a);
-        DoNotOptimize(result);
-    }
+        DoNotOptimize(std::hash<Medium>()(a));
+
     state.SetComplexityN(state.range(0));
 }
 BENCHMARK(MediumBenchHash)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
