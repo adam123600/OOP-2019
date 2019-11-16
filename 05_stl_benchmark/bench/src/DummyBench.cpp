@@ -1,6 +1,6 @@
 #include "Dummy.h"
 #include "BenchIncludes.h"
-
+/*
 static void Dummy_Integrate(State& state) {
 
     Dummy dummy{};
@@ -16,3 +16,4 @@ static void Dummy_Integrate(State& state) {
 }
 
 BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+*/
