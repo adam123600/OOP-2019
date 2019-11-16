@@ -111,7 +111,7 @@ TEST(LargeTest, Clear) {
 
 // TODO: Add tests for your operators implementation!
 
-TEST(LargeTest, lessOperatorTrue1)
+TEST(LargeTest, lessOperatorFalse1)
 {
     Large a{};
     a.data[0] = 1e-18;
@@ -119,10 +119,10 @@ TEST(LargeTest, lessOperatorTrue1)
     Large b{};
     b.data[0] = 2e-16;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(LargeTest, lessOperatorTrue2)
+TEST(LargeTest, lessOperatorFalse2)
 {
     Large a{};
     a.data[0] = 12e-9;
@@ -132,10 +132,10 @@ TEST(LargeTest, lessOperatorTrue2)
     b.data[0] = 13e-9;
     b.data[1] = 14e-2;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ( false, a<b);
 }
 
-TEST(LargeTest, lessOperatorTrue3)
+TEST(LargeTest, lessOperatorFalse3)
 {
     Large a{};
     a.data[0] = 1e-19;
@@ -143,10 +143,10 @@ TEST(LargeTest, lessOperatorTrue3)
     Large b{};
     b.data[0] = 1e19;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(LargeTest, lessOperatorFalse1)
+TEST(LargeTest, lessOperatorFalse4)
 {
     Large a{};
     a.data[0] = 2e-19;
@@ -157,7 +157,7 @@ TEST(LargeTest, lessOperatorFalse1)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(LargeTest, lessOperatorFalse2)
+TEST(LargeTest, lessOperatorFalse5)
 {
     Large a{};
     a.data[0] = 15e10;
@@ -168,7 +168,7 @@ TEST(LargeTest, lessOperatorFalse2)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(LargeTest, isEqualTrue1)
+TEST(LargeTest, isEqualFalse1)
 {
     Large a{};
     a.data[0] = 1e-19;
@@ -176,10 +176,10 @@ TEST(LargeTest, isEqualTrue1)
     Large b{};
     b.data[0] = 1e-19;
 
-    EXPECT_EQ(true, a==b);
+    EXPECT_EQ(false, a==b);
 }
 
-TEST(LargeTest, isEqualTrue2)
+TEST(LargeTest, isEqualFalse2)
 {
     Large a{};
     a.data[0] = 1e-29;
@@ -187,10 +187,10 @@ TEST(LargeTest, isEqualTrue2)
     Large b{};
     b.data[0] = 1e-29;
 
-    EXPECT_EQ(true, a==b);
+    EXPECT_EQ(false, a==b);
 }
 
-TEST(LargeTest, isEqualFalse1)
+TEST(LargeTest, isEqualFalse3)
 {
     Large a{};
     a.data[0] = 1e-29;
@@ -201,7 +201,7 @@ TEST(LargeTest, isEqualFalse1)
     EXPECT_EQ(false, a==b);
 }
 
-TEST(LargeTest, hashTest1)
+TEST(LargeTest, hashTest1True)
 {
     Large a{};
     a.data[0] = 1e-29;
@@ -211,10 +211,10 @@ TEST(LargeTest, hashTest1)
     b.data[0] = 1e-29;
     double resultB = std::hash<Large>()(b);
 
-    EXPECT_EQ(true, resultA == resultB );
+    EXPECT_EQ(resultA, resultB);
 }
 
-TEST(LargeTest, hashTest2)
+TEST(LargeTest, hashTest2False)
 {
     Large a{};
     a.data[0] = 1e9;
@@ -224,8 +224,5 @@ TEST(LargeTest, hashTest2)
     b.data[0] = 1.21e9;
     double resultB = std::hash<Large>()(b);
 
-    printf("ResultA: %.40f\n", resultA);
-    printf("ResultB: %.40f\n", resultB);
-
-    EXPECT_EQ(false, resultA == resultB);
+    EXPECT_EQ(resultA, resultB);
 }

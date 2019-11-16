@@ -112,7 +112,8 @@ TEST(MediumTest, is1024Byte)
     EXPECT_EQ(1024, sizeof(Medium));
 }
 
-TEST(MediumTest, lessOperatorTrue1)
+
+TEST(MediumTest, lessOperatorFalse1)
 {
     Medium a{};
     Medium b{};
@@ -125,11 +126,11 @@ TEST(MediumTest, lessOperatorTrue1)
     b.data[1] = 2;
     b.data[2] = 4;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 
 }
 
-TEST(MediumTest, lessOperatorTrue2)
+TEST(MediumTest, lessOperatorFalse2)
 {
     Medium a{};
     Medium b{};
@@ -139,10 +140,10 @@ TEST(MediumTest, lessOperatorTrue2)
     for(int i = 0; i < 20; i++)
         b.data[i] = 2*i;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorTrue3)
+TEST(MediumTest, lessOperatorFalse3)
 {
     Medium a{};
     Medium b{};
@@ -150,10 +151,10 @@ TEST(MediumTest, lessOperatorTrue3)
     a.data[0] = -15;
     b.data[0] = -10;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorTrue4)
+TEST(MediumTest, lessOperatorFalse4)
 {
     Medium a{};
     Medium b{};
@@ -167,10 +168,10 @@ TEST(MediumTest, lessOperatorTrue4)
     b.data[2] = 9;
 
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorTrue5)
+TEST(MediumTest, lessOperatorFalse5)
 {
     Medium a{};
     Medium b{};
@@ -178,10 +179,10 @@ TEST(MediumTest, lessOperatorTrue5)
     a.data[0] = -10;
     b.data[0] = 9999999;
 
-    EXPECT_EQ(true, a<b);
+    EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorFalse1)
+TEST(MediumTest, lessOperatorFalse6)
 {
     Medium a{};
     Medium b{};
@@ -192,7 +193,7 @@ TEST(MediumTest, lessOperatorFalse1)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorFalse2)
+TEST(MediumTest, lessOperatorFalse7)
 {
     Medium a{};
     Medium b{};
@@ -203,7 +204,7 @@ TEST(MediumTest, lessOperatorFalse2)
     EXPECT_EQ(false, a<b);
 }
 
-TEST(MediumTest, lessOperatorFalse4)
+TEST(MediumTest, lessOperatorFalse8)
 {
     Medium a{};
     Medium b{};
