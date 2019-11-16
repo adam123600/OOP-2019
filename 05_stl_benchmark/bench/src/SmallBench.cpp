@@ -8,6 +8,8 @@ static void SmallBenchLessOperator(benchmark::State& state)
     Small a{};
     Small b{};
 
+    a.data[0] = 0;
+    b.data[0] = 1;
 
 
     for ( auto AAA : state )
@@ -28,6 +30,9 @@ static void SmallBenchEqualOperator(benchmark::State& state)
     Small a{};
     Small b{};
 
+    a.data[0] = 0;
+    b.data[0] = 0;
+
     for ( auto AAA : state )
     {
         auto result = a==b;
@@ -42,6 +47,7 @@ BENCHMARK(SmallBenchEqualOperator)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->
 static void SmallBenchHash(benchmark::State& state)
 {
     Small a{};
+    a.data[0] = 0;
 
     for ( auto AAA : state )
     {
@@ -53,3 +59,4 @@ static void SmallBenchHash(benchmark::State& state)
 }
 
 BENCHMARK(SmallBenchHash)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+

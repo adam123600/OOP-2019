@@ -65,9 +65,6 @@ namespace std {
             {
                 result += 69*(((i+1)*69)/49)*d.data[i];
             }
-
-            printf("RESULT %d:", result);
-
             return result;
         }
     };
