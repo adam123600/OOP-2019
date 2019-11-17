@@ -224,5 +224,5 @@ TEST(LargeTest, hashTest2False)
     b.data[0] = 1.21e9;
     double resultB = std::hash<Large>()(b);
 
-    EXPECT_EQ(resultA, resultB);
+    EXPECT_EQ(false, resultA==resultB);
 }

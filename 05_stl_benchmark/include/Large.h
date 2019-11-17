@@ -29,9 +29,7 @@ struct Large {
 
         while( i++ < SIZE )
         {
-            if ( this->data[i] < rhs.data[i])
-                continue;
-            else
+            if ( this->data[i] >= rhs.data[i])
                 return false;
         }
         return true;
