@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/06_observer_pattern_test.dir/src/DummyTest.cpp.o  -o 06_observer_pattern_test ../lib06_observer_pattern_lib.a ../lib/libgtest.a ../lib/libgtest_main.a -lpthread ../lib/libgtest.a -lpthread 

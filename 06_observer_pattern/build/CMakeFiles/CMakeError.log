@@ -1,0 +1,99 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a49d5/fast 
+/usr/bin/make -f CMakeFiles/cmTC_a49d5.dir/build.make CMakeFiles/cmTC_a49d5.dir/build
+make[1]: Wejście do katalogu '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a49d5.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a49d5.dir/CheckSymbolExists.c.o   -c /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a49d5
+/opt/clion-2019.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a49d5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a49d5.dir/CheckSymbolExists.c.o  -o cmTC_a49d5 
+/usr/bin/ld: CMakeFiles/cmTC_a49d5.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a49d5.dir/build.make:87: cmTC_a49d5] Błąd 1
+make[1]: Opuszczenie katalogu '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a49d5/fast] Błąd 2
+
+File /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a4fba/fast 
+/usr/bin/make -f CMakeFiles/cmTC_a4fba.dir/build.make CMakeFiles/cmTC_a4fba.dir/build
+make[1]: Wejście do katalogu '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4fba.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a4fba.dir/CheckFunctionExists.c.o   -c /opt/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4fba
+/opt/clion-2019.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4fba.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a4fba.dir/CheckFunctionExists.c.o  -o cmTC_a4fba -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a4fba.dir/build.make:87: cmTC_a4fba] Błąd 1
+make[1]: Opuszczenie katalogu '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a4fba/fast] Błąd 2
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e8a7/fast 
+/usr/bin/make -f CMakeFiles/cmTC_0e8a7.dir/build.make CMakeFiles/cmTC_0e8a7.dir/build
+make[1]: Entering directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0e8a7.dir/src.cxx.o
+/usr/bin/c++    -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_0e8a7.dir/src.cxx.o -c /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+make[1]: *** [CMakeFiles/cmTC_0e8a7.dir/build.make:66: CMakeFiles/cmTC_0e8a7.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0e8a7/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_902df/fast 
+/usr/bin/make -f CMakeFiles/cmTC_902df.dir/build.make CMakeFiles/cmTC_902df.dir/build
+make[1]: Entering directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_902df.dir/src.cxx.o
+/usr/bin/c++    -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles/cmTC_902df.dir/src.cxx.o -c /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd654'
+c++: error: unrecognized command line option '-wd654'
+make[1]: *** [CMakeFiles/cmTC_902df.dir/build.make:66: CMakeFiles/cmTC_902df.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_902df/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5e4e3/fast 
+/usr/bin/make -f CMakeFiles/cmTC_5e4e3.dir/build.make CMakeFiles/cmTC_5e4e3.dir/build
+make[1]: Entering directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5e4e3.dir/src.cxx.o
+/usr/bin/c++    -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles/cmTC_5e4e3.dir/src.cxx.o -c /home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+make[1]: *** [CMakeFiles/cmTC_5e4e3.dir/build.make:66: CMakeFiles/cmTC_5e4e3.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/student/oop_2019_g2_adam_pilichowski/06_observer_pattern/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5e4e3/fast] Error 2
+
+Source file was:
+int main() { return 0; }

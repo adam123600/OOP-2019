@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+61e554106c949e8a64e734fae9124fe2 uml/CMakeFiles/06_observer_pattern_uml
+bee7206c1a13b47f879c98a2bce6da65 uml/diagram.svg
