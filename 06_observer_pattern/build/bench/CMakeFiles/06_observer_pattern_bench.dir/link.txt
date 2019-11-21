@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/06_observer_pattern_bench.dir/src/DummyBench.cpp.o  -o 06_observer_pattern_bench ../lib06_observer_pattern_lib.a ../external/benchmark/src/libbenchmark.a ../external/benchmark/src/libbenchmark_main.a -lpthread ../external/benchmark/src/libbenchmark.a -pthread /usr/lib/x86_64-linux-gnu/librt.so 
