@@ -5,7 +5,7 @@
 #include "Small.h"
 #include "BenchIncludes.h"
 #include <map>
-/*
+
 static void SmallBenchMapAt(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -315,4 +315,3 @@ static void SmallBenchMapUpperBound(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
-*/
