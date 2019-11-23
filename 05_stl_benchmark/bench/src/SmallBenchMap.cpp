@@ -6,7 +6,6 @@
 #include "BenchIncludes.h"
 #include <map>
 
-
 static void SmallBenchMapAt(benchmark::State& state)
 {
     auto N = state.range(0);

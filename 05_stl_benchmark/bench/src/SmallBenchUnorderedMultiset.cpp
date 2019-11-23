@@ -5,7 +5,7 @@
 #include "Small.h"
 #include "BenchIncludes.h"
 #include <unordered_set>
-/*
+
 static void SmallBenchUnorderedMultisetEmpty(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -73,8 +73,6 @@ static void SmallBenchUnorderedMultisetMaxSize(benchmark::State& state)
 }
 BENCHMARK(SmallBenchUnorderedMultisetMaxSize)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
-
-
 static void SmallBenchUnorderedMultisetClear(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -89,13 +87,20 @@ static void SmallBenchUnorderedMultisetClear(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+            for(long i = 0; i < N; i++)
+            {
+                s1.randomize();
+                containerMultiSet.insert(s1);
+            }
+        state.ResumeTiming();
+
         containerMultiSet.clear();
     }
 
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchUnorderedMultisetClear)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
-
 
 
 static void SmallBenchUnorderedMultisetInsert(benchmark::State& state)
@@ -112,12 +117,18 @@ static void SmallBenchUnorderedMultisetInsert(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+            s1.randomize();
+            containerMultiSet.erase(s1);
+        state.ResumeTiming();
+
         containerMultiSet.insert(s1);
     }
 
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchUnorderedMultisetInsert)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
+
 
 static void SmallBenchUnorderedMultisetErase(benchmark::State& state)
 {
@@ -167,7 +178,6 @@ static void SmallBenchUnorderedMultisetSwap(benchmark::State& state)
 }
 BENCHMARK(SmallBenchUnorderedMultisetSwap)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
-
 static void SmallBenchUnorderedMultisetCount(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -209,6 +219,7 @@ static void SmallBenchUnorderedMultisetFind(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchUnorderedMultisetFind)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
+
 
 static void SmallBenchUnorderedMultisetEqualRange(benchmark::State& state)
 {
@@ -255,7 +266,6 @@ static void SmallBenchUnorderedMultisetRehash(benchmark::State& state)
 BENCHMARK(SmallBenchUnorderedMultisetRehash)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
 
-
 static void SmallBenchUnorderedMultisetReserve(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -276,4 +286,3 @@ static void SmallBenchUnorderedMultisetReserve(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchUnorderedMultisetReserve)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
-*/
