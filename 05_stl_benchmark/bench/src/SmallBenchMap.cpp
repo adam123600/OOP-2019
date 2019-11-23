@@ -6,6 +6,8 @@
 #include "BenchIncludes.h"
 #include <map>
 
+/*
+
 static void SmallBenchMapAt(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -117,7 +119,7 @@ static void SmallBenchMapMaxSize(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchMapMaxSize)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
-
+*/
 static void SmallBenchMapClear(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -132,13 +134,21 @@ static void SmallBenchMapClear(benchmark::State& state)
 
     for ( auto AAA : state )
     {
+        state.PauseTiming();
+            for(long i = 0; i < N; i++)
+            {
+                s1.randomize();
+                containerMap.insert({i, s1});
+            }
+        state.ResumeTiming();
+
         containerMap.clear();
     }
 
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchMapClear)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
-
+/*
 static void SmallBenchMapInsert(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -315,3 +325,4 @@ static void SmallBenchMapUpperBound(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
+*/

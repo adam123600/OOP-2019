@@ -5,7 +5,7 @@
 #include "Small.h"
 #include "BenchIncludes.h"
 #include <deque>
-
+/*
 
 static void SmallBenchDequeAt(benchmark::State& state)
 {
@@ -163,6 +163,8 @@ static void SmallBenchDequeMaxSize(benchmark::State& state)
 BENCHMARK(SmallBenchDequeMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 
+
+
 static void SmallBenchDequeShrinkToFit(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -177,12 +179,19 @@ static void SmallBenchDequeShrinkToFit(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+        s1.randomize();
+        containerDeque.push_front(s1);
+        containerDeque.resize(N);
+        containerDeque.clear();
+        state.ResumeTiming();
+
         containerDeque.shrink_to_fit();
     }
 
     state.SetComplexityN(N);
 }
-BENCHMARK(SmallBenchDequeShrinkToFit)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SmallBenchDequeShrinkToFit)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
 
 static void SmallBenchDequeClear(benchmark::State& state)
@@ -199,11 +208,19 @@ static void SmallBenchDequeClear(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+        for(long i = 0; i < N; i++)
+        {
+            s1.randomize();
+            containerDeque.push_front(s1);
+        }
+        state.ResumeTiming();
+
         containerDeque.clear();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(SmallBenchDequeClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SmallBenchDequeClear)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
 
 static void SmallBenchDequeInsert(benchmark::State& state)
@@ -220,6 +237,10 @@ static void SmallBenchDequeInsert(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+        containerDeque.erase(containerDeque.begin() + N/2);
+        state.ResumeTiming();
+
         containerDeque.insert(containerDeque.begin() + N/2, s1);
     }
     state.SetComplexityN(N);
@@ -269,11 +290,15 @@ static void SmallBenchDequePushBack(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+            containerDeque.erase(containerDeque.begin());
+        state.ResumeTiming();
+
         containerDeque.push_back(s1);
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(SmallBenchDequePushBack)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+BENCHMARK(SmallBenchDequePushBack)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
 
 static void SmallBenchDequePopBack(benchmark::State& state)
@@ -315,11 +340,15 @@ static void SmallBenchDequePushFront(benchmark::State& state)
 
     for( auto AAA : state )
     {
+        state.PauseTiming();
+            containerDeque.erase(containerDeque.end());
+        state.ResumeTiming();
+
         containerDeque.push_front(s1);
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(SmallBenchDequePushFront)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+BENCHMARK(SmallBenchDequePushFront)->RangeMultiplier(2)->Range(1, 1<<17)->Complexity();
 
 
 
@@ -347,6 +376,7 @@ static void SmallBenchDequePopFront(benchmark::State& state)
 }
 BENCHMARK(SmallBenchDequePopFront)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
 
+
 static void SmallBenchDequeResize(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -361,14 +391,18 @@ static void SmallBenchDequeResize(benchmark::State& state)
 
     for( auto AAA : state )
     {
-       containerDeque.resize(2*N, s1);
+        state.PauseTiming();
+            auto size = rand();
+        state.ResumeTiming();
+
+       containerDeque.resize(size, s1);
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(SmallBenchDequeResize)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+BENCHMARK(SmallBenchDequeResize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+/*
 
-
-
+/*
 static void SmallBenchDequeSwap(benchmark::State& state)
 {
     auto N = state.range(0);
@@ -391,3 +425,4 @@ static void SmallBenchDequeSwap(benchmark::State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(SmallBenchDequeSwap)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+*/
