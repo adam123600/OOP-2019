@@ -1,0 +1,353 @@
+2019-11-24 00:43:28
+Running ./05_stl_benchmark_bench
+Run on (4 X 2712 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 0.81, 0.80, 0.91
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+---------------------------------------------------------------------------------------
+Benchmark                                             Time             CPU   Iterations
+---------------------------------------------------------------------------------------
+SmallBenchDequeAt/1                                65.0 ns         64.6 ns     10221937
+SmallBenchDequeAt/2                                65.3 ns         65.0 ns     10428263
+SmallBenchDequeAt/4                                64.5 ns         64.5 ns     10699513
+SmallBenchDequeAt/8                                64.6 ns         64.5 ns     10575562
+SmallBenchDequeAt/16                               64.6 ns         64.5 ns     10791911
+SmallBenchDequeAt/32                               64.5 ns         64.4 ns     10773406
+SmallBenchDequeAt/64                               64.4 ns         64.4 ns     10759016
+SmallBenchDequeAt/128                              64.5 ns         64.4 ns     10715404
+SmallBenchDequeAt/256                              64.8 ns         64.5 ns     10711492
+SmallBenchDequeAt/512                              64.6 ns         64.5 ns     10793458
+SmallBenchDequeAt/1024                             93.5 ns         93.4 ns      7389849
+SmallBenchDequeAt/2048                             99.7 ns         99.6 ns      7015963
+SmallBenchDequeAt/4096                              102 ns          102 ns      6826667
+SmallBenchDequeAt/8192                              104 ns          103 ns      6712735
+SmallBenchDequeAt/16384                             104 ns          104 ns      6708615
+SmallBenchDequeAt/32768                             105 ns          105 ns      6724904
+SmallBenchDequeAt/65536                             104 ns          104 ns      6701024
+SmallBenchDequeAt/131072                            105 ns          105 ns      6695377
+SmallBenchDequeAt_BigO                            81.29 (1)       81.18 (1)  
+SmallBenchDequeAt_RMS                                23 %            23 %    
+SmallBenchDequeOperatorSquareBracket/1             43.3 ns         43.3 ns     16007729
+SmallBenchDequeOperatorSquareBracket/2             43.3 ns         43.3 ns     16207258
+SmallBenchDequeOperatorSquareBracket/4             43.2 ns         43.2 ns     16206772
+SmallBenchDequeOperatorSquareBracket/8             43.2 ns         43.2 ns     16215146
+SmallBenchDequeOperatorSquareBracket/16            43.3 ns         43.3 ns     16197508
+SmallBenchDequeOperatorSquareBracket/32            43.2 ns         43.2 ns     16197446
+SmallBenchDequeOperatorSquareBracket/64            43.2 ns         43.1 ns     16237565
+SmallBenchDequeOperatorSquareBracket/128           43.2 ns         43.2 ns     16246783
+SmallBenchDequeOperatorSquareBracket/256           43.3 ns         43.3 ns     16068342
+SmallBenchDequeOperatorSquareBracket/512           43.2 ns         43.2 ns     16234646
+SmallBenchDequeOperatorSquareBracket/1024          73.3 ns         73.3 ns      9457951
+SmallBenchDequeOperatorSquareBracket/2048          78.9 ns         78.9 ns      8785952
+SmallBenchDequeOperatorSquareBracket/4096          81.3 ns         81.3 ns      8514269
+SmallBenchDequeOperatorSquareBracket/8192          83.0 ns         83.0 ns      8423176
+SmallBenchDequeOperatorSquareBracket/16384         83.2 ns         83.2 ns      8387418
+SmallBenchDequeOperatorSquareBracket/32768         83.7 ns         83.7 ns      8377081
+SmallBenchDequeOperatorSquareBracket/65536         83.7 ns         83.7 ns      8355280
+SmallBenchDequeOperatorSquareBracket/131072        83.9 ns         83.9 ns      8368011
+SmallBenchDequeOperatorSquareBracket_BigO         60.20 (1)       60.18 (1)  
+SmallBenchDequeOperatorSquareBracket_RMS             32 %            32 %    
+SmallBenchDequeFront/1                             12.1 ns         12.1 ns     57736628
+SmallBenchDequeFront/2                             12.1 ns         12.1 ns     57710119
+SmallBenchDequeFront/4                             12.2 ns         12.1 ns     57625258
+SmallBenchDequeFront/8                             12.5 ns         12.4 ns     57509952
+SmallBenchDequeFront/16                            12.1 ns         12.1 ns     57643313
+SmallBenchDequeFront/32                            12.1 ns         12.1 ns     57715061
+SmallBenchDequeFront/64                            12.3 ns         12.2 ns     57699344
+SmallBenchDequeFront/128                           12.1 ns         12.1 ns     57589283
+SmallBenchDequeFront/256                           12.1 ns         12.1 ns     57690023
+SmallBenchDequeFront/512                           12.1 ns         12.1 ns     57561520
+SmallBenchDequeFront/1024                          12.2 ns         12.1 ns     57519958
+SmallBenchDequeFront/2048                          12.2 ns         12.1 ns     57856782
+SmallBenchDequeFront/4096                          12.1 ns         12.1 ns     57414620
+SmallBenchDequeFront/8192                          12.1 ns         12.1 ns     57599499
+SmallBenchDequeFront/16384                         12.2 ns         12.1 ns     57498298
+SmallBenchDequeFront/32768                         12.1 ns         12.1 ns     57464679
+SmallBenchDequeFront/65536                         12.2 ns         12.1 ns     57736348
+SmallBenchDequeFront/131072                        12.2 ns         12.1 ns     57831001
+SmallBenchDequeFront_BigO                         12.17 (1)       12.14 (1)  
+SmallBenchDequeFront_RMS                              1 %             1 %    
+SmallBenchDequeBack/1                              28.1 ns         28.0 ns     24916587
+SmallBenchDequeBack/2                              28.2 ns         28.1 ns     24916524
+SmallBenchDequeBack/4                              28.2 ns         28.1 ns     24960629
+SmallBenchDequeBack/8                              28.2 ns         28.1 ns     24862766
+SmallBenchDequeBack/16                             28.2 ns         28.2 ns     24941843
+SmallBenchDequeBack/32                             28.1 ns         28.1 ns     24873167
+SmallBenchDequeBack/64                             28.2 ns         28.2 ns     24914017
+SmallBenchDequeBack/128                            28.1 ns         28.1 ns     24890263
+SmallBenchDequeBack/256                            28.2 ns         28.1 ns     24914557
+SmallBenchDequeBack/512                            28.2 ns         28.1 ns     24867642
+SmallBenchDequeBack/1024                           28.2 ns         28.1 ns     24879828
+SmallBenchDequeBack/2048                           28.1 ns         28.1 ns     24881436
+SmallBenchDequeBack/4096                           28.1 ns         28.1 ns     24807931
+SmallBenchDequeBack/8192                           29.6 ns         29.1 ns     24873523
+SmallBenchDequeBack/16384                          30.8 ns         30.5 ns     21470959
+SmallBenchDequeBack/32768                          32.3 ns         31.9 ns     22252465
+SmallBenchDequeBack/65536                          33.6 ns         32.8 ns     21703020
+SmallBenchDequeBack/131072                         33.8 ns         32.8 ns     20349846
+SmallBenchDequeBack_BigO                          29.24 (1)       29.04 (1)  
+SmallBenchDequeBack_RMS                               7 %             6 %    
+SmallBenchDequeEmpty/1                             7.00 ns         6.75 ns     88794880
+SmallBenchDequeEmpty/2                             6.35 ns         6.06 ns    114051418
+SmallBenchDequeEmpty/4                             6.09 ns         6.04 ns    121686991
+SmallBenchDequeEmpty/8                             6.10 ns         6.07 ns    113922411
+SmallBenchDequeEmpty/16                            7.17 ns         7.12 ns    114653384
+SmallBenchDequeEmpty/32                            6.85 ns         6.83 ns    119829548
+SmallBenchDequeEmpty/64                            6.33 ns         6.31 ns    100504171
+SmallBenchDequeEmpty/128                           7.71 ns         7.63 ns    120941085
+SmallBenchDequeEmpty/256                           7.63 ns         7.50 ns    108379037
+SmallBenchDequeEmpty/512                           6.90 ns         6.88 ns    112904956
+SmallBenchDequeEmpty/1024                          6.91 ns         6.89 ns     88382581
+SmallBenchDequeEmpty/2048                          7.24 ns         7.23 ns     86450610
+SmallBenchDequeEmpty/4096                          6.60 ns         6.57 ns    114486835
+SmallBenchDequeEmpty/8192                          6.65 ns         6.64 ns    116790556
+SmallBenchDequeEmpty/16384                         7.28 ns         7.28 ns     97343469
+SmallBenchDequeEmpty/32768                         6.53 ns         6.52 ns     97227619
+SmallBenchDequeEmpty/65536                         6.29 ns         6.28 ns    107534312
+SmallBenchDequeEmpty/131072                        6.51 ns         6.48 ns     87668863
+SmallBenchDequeEmpty_BigO                          6.79 (1)        6.73 (1)  
+SmallBenchDequeEmpty_RMS                              7 %             7 %    
+SmallBenchDequeSize/1                              16.7 ns         16.6 ns     42698239
+SmallBenchDequeSize/2                              16.8 ns         16.8 ns     41665499
+SmallBenchDequeSize/4                              16.6 ns         16.6 ns     41004532
+SmallBenchDequeSize/8                              17.9 ns         17.8 ns     41156223
+SmallBenchDequeSize/16                             17.2 ns         17.1 ns     42382605
+SmallBenchDequeSize/32                             16.8 ns         16.7 ns     42039900
+SmallBenchDequeSize/64                             17.9 ns         17.9 ns     42622433
+SmallBenchDequeSize/128                            18.2 ns         18.0 ns     32437669
+SmallBenchDequeSize/256                            17.6 ns         17.4 ns     42197545
+SmallBenchDequeSize/512                            19.4 ns         19.2 ns     39922371
+SmallBenchDequeSize/1024                           18.1 ns         17.9 ns     41290971
+SmallBenchDequeSize/2048                           17.5 ns         17.2 ns     41351003
+SmallBenchDequeSize/4096                           16.8 ns         16.6 ns     42232330
+SmallBenchDequeSize/8192                           16.5 ns         16.4 ns     42983695
+SmallBenchDequeSize/16384                          18.4 ns         18.2 ns     40201054
+SmallBenchDequeSize/32768                          16.5 ns         16.4 ns     40593470
+SmallBenchDequeSize/65536                          21.2 ns         19.9 ns     35917425
+SmallBenchDequeSize/131072                         17.1 ns         17.0 ns     40256398
+SmallBenchDequeSize_BigO                          17.62 (1)       17.44 (1)  
+SmallBenchDequeSize_RMS                               7 %             5 %    
+SmallBenchDequeMaxSize/1                           8.94 ns         8.81 ns     81649308
+SmallBenchDequeMaxSize/2                           8.69 ns         8.64 ns     76166186
+SmallBenchDequeMaxSize/4                           8.69 ns         8.60 ns     81902953
+SmallBenchDequeMaxSize/8                           8.98 ns         8.86 ns     77977075
+SmallBenchDequeMaxSize/16                          8.75 ns         8.65 ns     81869574
+SmallBenchDequeMaxSize/32                          8.64 ns         8.60 ns     77299460
+SmallBenchDequeMaxSize/64                          8.55 ns         8.54 ns     82412166
+SmallBenchDequeMaxSize/128                         9.25 ns         9.19 ns     81518866
+SmallBenchDequeMaxSize/256                         9.72 ns         9.60 ns     71355238
+SmallBenchDequeMaxSize/512                         9.46 ns         9.44 ns     74202311
+SmallBenchDequeMaxSize/1024                        9.79 ns         9.78 ns     68629678
+SmallBenchDequeMaxSize/2048                        9.06 ns         9.06 ns     77249779
+SmallBenchDequeMaxSize/4096                        9.20 ns         9.20 ns     77233797
+SmallBenchDequeMaxSize/8192                        9.55 ns         9.54 ns     80878485
+SmallBenchDequeMaxSize/16384                       9.31 ns         9.31 ns     72031287
+SmallBenchDequeMaxSize/32768                       9.24 ns         9.23 ns     77829527
+SmallBenchDequeMaxSize/65536                       9.19 ns         9.18 ns     78946141
+SmallBenchDequeMaxSize/131072                      9.22 ns         9.21 ns     82455553
+SmallBenchDequeMaxSize_BigO                        9.12 (1)        9.08 (1)  
+SmallBenchDequeMaxSize_RMS                            4 %             4 %    
+SmallBenchDequeShrinkToFit/1                       1698 ns         1708 ns       394913
+SmallBenchDequeShrinkToFit/2                       1650 ns         1655 ns       405659
+SmallBenchDequeShrinkToFit/4                       1624 ns         1628 ns       445600
+SmallBenchDequeShrinkToFit/8                       1927 ns         1926 ns       398987
+SmallBenchDequeShrinkToFit/16                      1736 ns         1739 ns       380134
+SmallBenchDequeShrinkToFit/32                      1716 ns         1717 ns       420638
+SmallBenchDequeShrinkToFit/64                      1599 ns         1607 ns       382937
+SmallBenchDequeShrinkToFit/128                     1638 ns         1641 ns       432706
+SmallBenchDequeShrinkToFit/256                     1673 ns         1669 ns       424119
+SmallBenchDequeShrinkToFit/512                     1639 ns         1629 ns       413092
+SmallBenchDequeShrinkToFit/1024                    1602 ns         1592 ns       426033
+SmallBenchDequeShrinkToFit/2048                    1620 ns         1607 ns       421962
+SmallBenchDequeShrinkToFit/4096                    1586 ns         1575 ns       445080
+SmallBenchDequeShrinkToFit/8192                    1636 ns         1611 ns       443102
+SmallBenchDequeShrinkToFit/16384                   1679 ns         1640 ns       432258
+SmallBenchDequeShrinkToFit/32768                   1789 ns         1712 ns       407796
+SmallBenchDequeShrinkToFit/65536                   1993 ns         1854 ns       330027
+SmallBenchDequeShrinkToFit/131072                  2706 ns         2360 ns       305762
+SmallBenchDequeShrinkToFit_BigO                 1750.53 (1)     1714.91 (1)  
+SmallBenchDequeShrinkToFit_RMS                       15 %            10 %    
+SmallBenchDequeClear/1                              758 ns          761 ns       892283
+SmallBenchDequeClear/2                              757 ns          757 ns       931983
+SmallBenchDequeClear/4                              765 ns          766 ns       937889
+SmallBenchDequeClear/8                              759 ns          760 ns       933419
+SmallBenchDequeClear/16                             744 ns          744 ns       918752
+SmallBenchDequeClear/32                             788 ns          788 ns       894311
+SmallBenchDequeClear/64                             822 ns          821 ns       845421
+SmallBenchDequeClear/128                            853 ns          849 ns       845794
+SmallBenchDequeClear/256                            880 ns          872 ns       804412
+SmallBenchDequeClear/512                            917 ns          899 ns       772643
+SmallBenchDequeClear/1024                           989 ns          954 ns       685184
+SmallBenchDequeClear/2048                          1106 ns         1048 ns       678276
+SmallBenchDequeClear/4096                          1403 ns         1286 ns       550689
+SmallBenchDequeClear/8192                          2011 ns         1787 ns       388291
+SmallBenchDequeClear/16384                         2369 ns         2214 ns       316806
+SmallBenchDequeClear/32768                         4427 ns         4070 ns       183320
+SmallBenchDequeClear/65536                         9716 ns         8646 ns        83859
+SmallBenchDequeClear/131072                       21042 ns        19456 ns        40907
+SmallBenchDequeClear_BigO                          0.01 NlgN       0.01 NlgN 
+SmallBenchDequeClear_RMS                             26 %            28 %    
+SmallBenchDequeInsert/1                             815 ns          817 ns       820050
+SmallBenchDequeInsert/2                             883 ns          884 ns       772086
+SmallBenchDequeInsert/4                            1087 ns         1089 ns       649735
+SmallBenchDequeInsert/8                            1194 ns         1196 ns       599781
+SmallBenchDequeInsert/16                           1219 ns         1221 ns       594550
+SmallBenchDequeInsert/32                           1171 ns         1173 ns       569280
+SmallBenchDequeInsert/64                           1184 ns         1187 ns       602114
+SmallBenchDequeInsert/128                          1165 ns         1167 ns       578415
+SmallBenchDequeInsert/256                          1158 ns         1155 ns       571366
+SmallBenchDequeInsert/512                          1185 ns         1186 ns       599752
+SmallBenchDequeInsert/1024                         1296 ns         1299 ns       547005
+SmallBenchDequeInsert/2048                         1540 ns         1541 ns       464954
+SmallBenchDequeInsert/4096                         2000 ns         2002 ns       362143
+SmallBenchDequeInsert/8192                         2962 ns         2964 ns       236574
+SmallBenchDequeInsert/16384                        5049 ns         5052 ns       139001
+SmallBenchDequeInsert/32768                        8398 ns         8400 ns        77481
+SmallBenchDequeInsert/65536                       16132 ns        16135 ns        43379
+SmallBenchDequeInsert/131072                      31098 ns        31087 ns        23195
+SmallBenchDequeInsert_BigO                         0.24 N          0.24 N    
+SmallBenchDequeInsert_RMS                            23 %            23 %    
+SmallBenchDequeErase/1                              927 ns          931 ns       750696
+SmallBenchDequeErase/2                             1082 ns         1083 ns       651127
+SmallBenchDequeErase/4                             1181 ns         1183 ns       616519
+SmallBenchDequeErase/8                             1168 ns         1174 ns       599474
+SmallBenchDequeErase/16                            1180 ns         1182 ns       606866
+SmallBenchDequeErase/32                            1181 ns         1183 ns       564046
+SmallBenchDequeErase/64                            1161 ns         1164 ns       588609
+SmallBenchDequeErase/128                           1167 ns         1169 ns       561437
+SmallBenchDequeErase/256                           1206 ns         1207 ns       598349
+SmallBenchDequeErase/512                           1162 ns         1166 ns       617139
+SmallBenchDequeErase/1024                          1255 ns         1257 ns       589190
+SmallBenchDequeErase/2048                          1455 ns         1457 ns       504643
+SmallBenchDequeErase/4096                          1936 ns         1937 ns       371684
+SmallBenchDequeErase/8192                          2723 ns         2727 ns       249359
+SmallBenchDequeErase/16384                         4450 ns         4451 ns       150896
+SmallBenchDequeErase/32768                         8109 ns         8109 ns        90599
+SmallBenchDequeErase/65536                        14789 ns        14794 ns        44132
+SmallBenchDequeErase/131072                       29992 ns        30003 ns        24510
+SmallBenchDequeErase_BigO                          0.23 N          0.23 N    
+SmallBenchDequeErase_RMS                             23 %            23 %    
+SmallBenchDequePushBack/1                           804 ns          804 ns       839925
+SmallBenchDequePushBack/2                           743 ns          743 ns       931324
+SmallBenchDequePushBack/4                           752 ns          752 ns       943994
+SmallBenchDequePushBack/8                           755 ns          755 ns       904115
+SmallBenchDequePushBack/16                          750 ns          750 ns       944106
+SmallBenchDequePushBack/32                          751 ns          751 ns       933566
+SmallBenchDequePushBack/64                          743 ns          744 ns       943921
+SmallBenchDequePushBack/128                         740 ns          740 ns       932618
+SmallBenchDequePushBack/256                         754 ns          756 ns       958641
+SmallBenchDequePushBack/512                         749 ns          747 ns       940302
+SmallBenchDequePushBack/1024                        743 ns          744 ns       944405
+SmallBenchDequePushBack/2048                        753 ns          754 ns       940886
+SmallBenchDequePushBack/4096                        747 ns          747 ns       938840
+SmallBenchDequePushBack/8192                        751 ns          751 ns       897757
+SmallBenchDequePushBack/16384                       745 ns          745 ns       960612
+SmallBenchDequePushBack/32768                       755 ns          754 ns       890087
+SmallBenchDequePushBack/65536                       742 ns          742 ns       906963
+SmallBenchDequePushBack/131072                      762 ns          762 ns       947697
+SmallBenchDequePushBack_BigO                     752.16 (1)      752.30 (1)  
+SmallBenchDequePushBack_RMS                           2 %             2 %    
+SmallBenchDequePopBack/1                            735 ns          736 ns       938623
+SmallBenchDequePopBack/2                            730 ns          731 ns       974594
+SmallBenchDequePopBack/4                            737 ns          739 ns       933700
+SmallBenchDequePopBack/8                            737 ns          738 ns       978887
+SmallBenchDequePopBack/16                           737 ns          739 ns       959776
+SmallBenchDequePopBack/32                           736 ns          737 ns       916590
+SmallBenchDequePopBack/64                           751 ns          752 ns       912038
+SmallBenchDequePopBack/128                          746 ns          749 ns       905505
+SmallBenchDequePopBack/256                          743 ns          745 ns       970444
+SmallBenchDequePopBack/512                          739 ns          740 ns       896252
+SmallBenchDequePopBack/1024                         736 ns          738 ns       944373
+SmallBenchDequePopBack/2048                         756 ns          757 ns       899724
+SmallBenchDequePopBack/4096                         737 ns          739 ns       929725
+SmallBenchDequePopBack/8192                         739 ns          740 ns       954784
+SmallBenchDequePopBack/16384                        734 ns          736 ns       893288
+SmallBenchDequePopBack/32768                        745 ns          747 ns       951364
+SmallBenchDequePopBack/65536                        741 ns          742 ns       917035
+SmallBenchDequePopBack/131072                       749 ns          750 ns       960032
+SmallBenchDequePopBack_BigO                      740.50 (1)      741.95 (1)  
+SmallBenchDequePopBack_RMS                            1 %             1 %    
+SmallBenchDequePushFront/1                          764 ns          764 ns       909367
+SmallBenchDequePushFront/2                          753 ns          753 ns       909165
+SmallBenchDequePushFront/4                          761 ns          760 ns       937864
+SmallBenchDequePushFront/8                          760 ns          760 ns       937932
+SmallBenchDequePushFront/16                         751 ns          751 ns       956595
+SmallBenchDequePushFront/32                         758 ns          759 ns       929778
+SmallBenchDequePushFront/64                         750 ns          749 ns       900139
+SmallBenchDequePushFront/128                        748 ns          749 ns       953848
+SmallBenchDequePushFront/256                        751 ns          751 ns       887902
+SmallBenchDequePushFront/512                        742 ns          742 ns       940945
+SmallBenchDequePushFront/1024                       753 ns          752 ns       933481
+SmallBenchDequePushFront/2048                       769 ns          768 ns       951420
+SmallBenchDequePushFront/4096                       767 ns          767 ns       917963
+SmallBenchDequePushFront/8192                       759 ns          758 ns       933661
+SmallBenchDequePushFront/16384                      752 ns          752 ns       934245
+SmallBenchDequePushFront/32768                      757 ns          756 ns       872719
+SmallBenchDequePushFront/65536                      768 ns          767 ns       888714
+SmallBenchDequePushFront/131072                     754 ns          754 ns       895647
+SmallBenchDequePushFront_BigO                    756.64 (1)      756.32 (1)  
+SmallBenchDequePushFront_RMS                          1 %             1 %    
+SmallBenchDequePopFront/1                           739 ns          740 ns       975251
+SmallBenchDequePopFront/2                           731 ns          732 ns       960844
+SmallBenchDequePopFront/4                           737 ns          738 ns       957301
+SmallBenchDequePopFront/8                           732 ns          733 ns       970029
+SmallBenchDequePopFront/16                          749 ns          751 ns       970864
+SmallBenchDequePopFront/32                          720 ns          722 ns       970809
+SmallBenchDequePopFront/64                          739 ns          741 ns       974615
+SmallBenchDequePopFront/128                         735 ns          737 ns       967280
+SmallBenchDequePopFront/256                         730 ns          732 ns       954148
+SmallBenchDequePopFront/512                         793 ns          794 ns       829648
+SmallBenchDequePopFront/1024                        782 ns          783 ns       885298
+SmallBenchDequePopFront/2048                        794 ns          796 ns       874263
+SmallBenchDequePopFront/4096                        788 ns          790 ns       909509
+SmallBenchDequePopFront/8192                        781 ns          783 ns       912279
+SmallBenchDequePopFront/16384                       798 ns          799 ns       861068
+SmallBenchDequePopFront/32768                       785 ns          787 ns       895190
+SmallBenchDequePopFront/65536                       788 ns          788 ns       895534
+SmallBenchDequePopFront/131072                      792 ns          793 ns       892374
+SmallBenchDequePopFront_BigO                     761.82 (1)      763.22 (1)  
+SmallBenchDequePopFront_RMS                           4 %             4 %    
+SmallBenchDequeResize/1             				729 ns          720 ns       924564
+SmallBenchDequeResize/2             				783 ns          780 ns       896545
+SmallBenchDequeResize/4             				821 ns          819 ns       855370
+SmallBenchDequeResize/8             				833 ns          833 ns       841250
+SmallBenchDequeResize/16            				859 ns          860 ns       822747
+SmallBenchDequeResize/32            				905 ns          900 ns       778180
+SmallBenchDequeResize/64            				977 ns          976 ns       724269
+SmallBenchDequeResize/128         				   1183 ns         1187 ns       499000
+SmallBenchDequeResize/256          				   1430 ns         1405 ns       526271
+SmallBenchDequeResize/512          				   1814 ns         1818 ns       355562
+SmallBenchDequeResize/1024         				   2829 ns         2830 ns       248192
+SmallBenchDequeResize/2048         				   4911 ns         4836 ns       146333
+SmallBenchDequeResize/4096         				   9129 ns         8822 ns        79812
+SmallBenchDequeResize/8192        				  16740 ns        16563 ns        42357
+SmallBenchDequeResize/16384       				  31824 ns        31828 ns        21879
+SmallBenchDequeResize/32768       				  63370 ns        63406 ns        11327
+SmallBenchDequeResize/65536      				 123435 ns       123446 ns         5724
+SmallBenchDequeResize/131072     				 249281 ns       248588 ns         2765
+SmallBenchDequeResize_BigO         					1.90 N          1.90 N    
+SmallBenchDequeResize_RMS             				  3 %             3 %    
+SmallBenchDequeSwap/1            				   71.7 ns         68.5 ns      9353143
+SmallBenchDequeSwap/2            				   79.5 ns         77.6 ns      9105319
+SmallBenchDequeSwap/4            				   68.4 ns         67.0 ns     10451143
+SmallBenchDequeSwap/8            				   69.1 ns         66.6 ns     10402736
+SmallBenchDequeSwap/16           				   67.8 ns         66.6 ns     10452847
+SmallBenchDequeSwap/32           				   66.7 ns         66.6 ns     10498240
+SmallBenchDequeSwap/64           				   67.1 ns         67.1 ns     10458637
+SmallBenchDequeSwap/128          				   67.4 ns         67.4 ns     10406433
+SmallBenchDequeSwap/256          				   68.9 ns         68.4 ns     10543939
+SmallBenchDequeSwap/512          				   66.9 ns         66.7 ns     10485706
+SmallBenchDequeSwap/1024         				   66.6 ns         66.6 ns     10426654
+SmallBenchDequeSwap/2048         				   66.8 ns         66.8 ns     10542650
+SmallBenchDequeSwap/4096         				   67.1 ns         66.7 ns     10478896
+SmallBenchDequeSwap/8192         				   67.8 ns         66.9 ns     10165210
+SmallBenchDequeSwap/16384        				   68.0 ns         67.6 ns     10656956
+SmallBenchDequeSwap/32768        				   67.3 ns         66.3 ns     10536253
+SmallBenchDequeSwap/65536        				   68.6 ns         67.2 ns     10415816
+SmallBenchDequeSwap/131072       				   67.0 ns         66.5 ns     10505327
+SmallBenchDequeSwap_BigO        				  68.48 (1)       67.62 (1)  
+SmallBenchDequeSwap_RMS             				  4 %             4 %    

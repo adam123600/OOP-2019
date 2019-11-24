@@ -389,10 +389,10 @@ static void SmallBenchDequeResize(benchmark::State& state)
     for( auto AAA : state )
     {
         state.PauseTiming();
-            auto size = rand();
+            auto size = rand()%N;
         state.ResumeTiming();
 
-       containerDeque.resize(size, s1);
+       containerDeque.resize(size);
     }
     state.SetComplexityN(N);
 }
