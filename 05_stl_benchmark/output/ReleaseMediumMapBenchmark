@@ -1,0 +1,150 @@
+2019-11-27 17:49:50
+Running ./05_stl_benchmark_bench
+Run on (4 X 2712 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 1.78, 1.43, 1.38
+------------------------------------------------------------------------------------------
+Benchmark                                                Time             CPU   Iterations
+------------------------------------------------------------------------------------------
+ReleaseMediumBenchMapAt/1                             54.0 ns         53.8 ns     12914114
+ReleaseMediumBenchMapAt/2                             71.4 ns         70.8 ns      9278345
+ReleaseMediumBenchMapAt/4                             71.3 ns         70.8 ns      9942400
+ReleaseMediumBenchMapAt/8                             57.7 ns         57.6 ns     12594492
+ReleaseMediumBenchMapAt/16                            55.7 ns         55.7 ns     12216331
+ReleaseMediumBenchMapAt/32                            70.6 ns         70.5 ns      9955123
+ReleaseMediumBenchMapAt/64                            70.6 ns         70.5 ns     10008070
+ReleaseMediumBenchMapAt/128                           70.9 ns         70.5 ns      9875229
+ReleaseMediumBenchMapAt/256                           72.3 ns         71.3 ns      9987548
+ReleaseMediumBenchMapAt/512                           64.2 ns         64.1 ns     10435349
+ReleaseMediumBenchMapAt/1024                          56.5 ns         56.5 ns     11266288
+ReleaseMediumBenchMapAt_BigO                         65.03 (1)       64.73 (1)  
+ReleaseMediumBenchMapAt_RMS                             11 %            11 %    
+ReleaseMediumBenchMapOperatorSquareBracket/1          57.3 ns         57.2 ns     12337226
+ReleaseMediumBenchMapOperatorSquareBracket/2          57.1 ns         57.0 ns     12325960
+ReleaseMediumBenchMapOperatorSquareBracket/4          57.7 ns         57.6 ns     10769465
+ReleaseMediumBenchMapOperatorSquareBracket/8          56.8 ns         56.7 ns     12320794
+ReleaseMediumBenchMapOperatorSquareBracket/16         57.0 ns         57.0 ns     12273747
+ReleaseMediumBenchMapOperatorSquareBracket/32         54.2 ns         54.1 ns     12739212
+ReleaseMediumBenchMapOperatorSquareBracket/64         55.9 ns         55.9 ns     12886610
+ReleaseMediumBenchMapOperatorSquareBracket/128        54.4 ns         54.3 ns     12915459
+ReleaseMediumBenchMapOperatorSquareBracket/256        54.8 ns         54.7 ns     12854553
+ReleaseMediumBenchMapOperatorSquareBracket/512        54.5 ns         54.4 ns     12952808
+ReleaseMediumBenchMapOperatorSquareBracket/1024       58.1 ns         58.1 ns     12074119
+ReleaseMediumBenchMapOperatorSquareBracket_BigO      56.15 (1)       56.09 (1)  
+ReleaseMediumBenchMapOperatorSquareBracket_RMS           2 %             2 %    
+ReleaseMediumBenchMapEmpty/1                         0.463 ns        0.463 ns   1000000000
+ReleaseMediumBenchMapEmpty/2                         0.468 ns        0.468 ns   1000000000
+ReleaseMediumBenchMapEmpty/4                         0.480 ns        0.474 ns   1000000000
+ReleaseMediumBenchMapEmpty/8                         0.457 ns        0.457 ns   1000000000
+ReleaseMediumBenchMapEmpty/16                        0.458 ns        0.458 ns   1000000000
+ReleaseMediumBenchMapEmpty/32                        0.459 ns        0.459 ns   1000000000
+ReleaseMediumBenchMapEmpty/64                        0.471 ns        0.471 ns   1000000000
+ReleaseMediumBenchMapEmpty/128                       0.460 ns        0.460 ns   1000000000
+ReleaseMediumBenchMapEmpty/256                       0.463 ns        0.463 ns   1000000000
+ReleaseMediumBenchMapEmpty/512                       0.459 ns        0.459 ns   1000000000
+ReleaseMediumBenchMapEmpty/1024                      0.462 ns        0.462 ns   1000000000
+ReleaseMediumBenchMapEmpty_BigO                       0.46 (1)        0.46 (1)  
+ReleaseMediumBenchMapEmpty_RMS                           1 %             1 %    
+ReleaseMediumBenchMapSize/1                          0.330 ns        0.330 ns   1000000000
+ReleaseMediumBenchMapSize/2                          0.329 ns        0.329 ns   1000000000
+ReleaseMediumBenchMapSize/4                          0.330 ns        0.329 ns   1000000000
+ReleaseMediumBenchMapSize/8                          0.330 ns        0.330 ns   1000000000
+ReleaseMediumBenchMapSize/16                         0.330 ns        0.330 ns   1000000000
+ReleaseMediumBenchMapSize/32                         0.331 ns        0.331 ns   1000000000
+ReleaseMediumBenchMapSize/64                         0.330 ns        0.330 ns   1000000000
+ReleaseMediumBenchMapSize/128                        0.332 ns        0.332 ns   1000000000
+ReleaseMediumBenchMapSize/256                        0.329 ns        0.329 ns   1000000000
+ReleaseMediumBenchMapSize/512                        0.329 ns        0.329 ns   1000000000
+ReleaseMediumBenchMapSize/1024                       0.330 ns        0.330 ns   1000000000
+ReleaseMediumBenchMapSize_BigO                        0.33 (1)        0.33 (1)  
+ReleaseMediumBenchMapSize_RMS                            0 %             0 %    
+ReleaseMediumBenchMapMaxSize/1                       0.352 ns        0.352 ns   1000000000
+ReleaseMediumBenchMapMaxSize/2                       0.351 ns        0.349 ns   1000000000
+ReleaseMediumBenchMapMaxSize/4                       0.363 ns        0.357 ns   1000000000
+ReleaseMediumBenchMapMaxSize/8                       0.359 ns        0.354 ns   1000000000
+ReleaseMediumBenchMapMaxSize/16                      0.356 ns        0.352 ns   1000000000
+ReleaseMediumBenchMapMaxSize/32                      0.383 ns        0.378 ns   1000000000
+ReleaseMediumBenchMapMaxSize/64                      0.398 ns        0.388 ns   1000000000
+ReleaseMediumBenchMapMaxSize/128                     0.487 ns        0.482 ns   1000000000
+ReleaseMediumBenchMapMaxSize/256                     0.400 ns        0.400 ns   1000000000
+ReleaseMediumBenchMapMaxSize/512                     0.470 ns        0.470 ns   1000000000
+ReleaseMediumBenchMapMaxSize/1024                    0.383 ns        0.383 ns   1000000000
+ReleaseMediumBenchMapMaxSize_BigO                     0.39 (1)        0.39 (1)  
+ReleaseMediumBenchMapMaxSize_RMS                        11 %            12 %    
+ReleaseMediumBenchMapClear/1                           842 ns          789 ns       892086
+ReleaseMediumBenchMapClear/2                           885 ns          816 ns       836517
+ReleaseMediumBenchMapClear/4                           894 ns          819 ns       824149
+ReleaseMediumBenchMapClear/8                           990 ns          873 ns       828289
+ReleaseMediumBenchMapClear/16                         1025 ns          895 ns       763806
+ReleaseMediumBenchMapClear/32                         1266 ns         1038 ns       671244
+ReleaseMediumBenchMapClear/64                         2269 ns         1641 ns       559942
+ReleaseMediumBenchMapClear/128                        2614 ns         1848 ns       375559
+ReleaseMediumBenchMapInsert/1         				   919 ns          900 ns       773590
+ReleaseMediumBenchMapInsert/2         				   918 ns          899 ns       769603
+ReleaseMediumBenchMapInsert/4         				   922 ns          902 ns       781862
+ReleaseMediumBenchMapInsert/8         				   893 ns          881 ns       795259
+ReleaseMediumBenchMapInsert/16       				   891 ns          875 ns       802727
+ReleaseMediumBenchMapInsert/32       				   902 ns          885 ns       790169
+ReleaseMediumBenchMapInsert_BigO     				907.60 (1)      890.22 (1)  
+ReleaseMediumBenchMapInsert_RMS          				 1 %             1 %    
+ReleaseMediumBenchMapErase/1         				   827 ns          801 ns       883712
+ReleaseMediumBenchMapErase/2         				   821 ns          796 ns       871538
+ReleaseMediumBenchMapErase/4         				   823 ns          799 ns       881714
+ReleaseMediumBenchMapErase/8         				   816 ns          792 ns       884227
+ReleaseMediumBenchMapErase/16        				   818 ns          796 ns       862857
+ReleaseMediumBenchMapErase/32        				   822 ns          797 ns       876310
+ReleaseMediumBenchMapErase_BigO     			    821.14 (1)      796.78 (1)  
+ReleaseMediumBenchMapErase_RMS         			         0 %             0 %    
+ReleaseMediumBenchMapSwap/1        					  4.27 ns         4.19 ns    168023806
+ReleaseMediumBenchMapSwap/2        					  4.25 ns         4.16 ns    169066505
+ReleaseMediumBenchMapSwap/4        				      4.29 ns         4.20 ns    167387027
+ReleaseMediumBenchMapSwap/8        					  4.29 ns         4.20 ns    167829166
+ReleaseMediumBenchMapSwap/16      					  4.23 ns         4.17 ns    167656283
+ReleaseMediumBenchMapSwap/32      					  4.34 ns         4.27 ns    167777436
+ReleaseMediumBenchMapSwap_BigO       				  4.28 (1)        4.20 (1)  
+ReleaseMediumBenchMapSwap_RMS          					 1 %             1 %    
+ReleaseMediumBenchMapCount/1         				   739 ns          729 ns       905320
+ReleaseMediumBenchMapCount/2        				   730 ns          719 ns       979905
+ReleaseMediumBenchMapCount/4        				   732 ns          720 ns       983110
+ReleaseMediumBenchMapCount/8        				   730 ns          720 ns       983456
+ReleaseMediumBenchMapCount/16      					   732 ns          723 ns       984088
+ReleaseMediumBenchMapCount/32       				   735 ns          725 ns       945931
+ReleaseMediumBenchMapCount_BigO    				    732.85 (1)      722.49 (1)  
+ReleaseMediumBenchMapCount_RMS        				     0 %             0 %    
+ReleaseMediumBenchMapFind/1       					   734 ns          720 ns       968804
+ReleaseMediumBenchMapFind/2         				   727 ns          718 ns       977621
+ReleaseMediumBenchMapFind/4        					   730 ns          721 ns       980686
+ReleaseMediumBenchMapFind/8        					   726 ns          716 ns       978908
+ReleaseMediumBenchMapFind/16       					   725 ns          715 ns       986320
+ReleaseMediumBenchMapFind/32       					   724 ns          716 ns       971725
+ReleaseMediumBenchMapFind_BigO     				    727.56 (1)      717.58 (1)  
+ReleaseMediumBenchMapFind_RMS       				     0 %             0 %    
+ReleaseMediumBenchMapEqualRange/1        			   753 ns          740 ns       949198
+ReleaseMediumBenchMapEqualRange/2        			   751 ns          743 ns       944299
+ReleaseMediumBenchMapEqualRange/4        			   745 ns          738 ns       954979
+ReleaseMediumBenchMapEqualRange/8         			   733 ns          725 ns       960455
+ReleaseMediumBenchMapEqualRange/16      			   743 ns          737 ns       936938
+ReleaseMediumBenchMapEqualRange/32       			   736 ns          731 ns       937993
+ReleaseMediumBenchMapEqualRange_BigO     			743.66 (1)      735.58 (1)  
+ReleaseMediumBenchMapEqualRange_RMS      			     1 %             1 %    
+ReleaseMediumBenchMapLowerBound/1      				 0.696 ns        0.679 ns    814998525
+ReleaseMediumBenchMapLowerBound/2      				 0.694 ns        0.682 ns   1000000000
+ReleaseMediumBenchMapLowerBound/4     			     0.697 ns        0.678 ns   1000000000
+ReleaseMediumBenchMapLowerBound/8      				 0.693 ns        0.686 ns    807252765
+ReleaseMediumBenchMapLowerBound/16     				 0.690 ns        0.683 ns   1000000000
+ReleaseMediumBenchMapLowerBound/32      			 0.680 ns        0.677 ns   1000000000
+ReleaseMediumBenchMapLowerBound_BigO     			  0.69 (1)        0.68 (1)  
+ReleaseMediumBenchMapLowerBound_RMS       			     1 %             0 %    
+ReleaseMediumBenchMapUpperBound/1       			 0.715 ns        0.696 ns    946100109
+ReleaseMediumBenchMapUpperBound/2       			 0.685 ns        0.676 ns   1000000000
+ReleaseMediumBenchMapUpperBound/4      			     0.689 ns        0.676 ns    911810389
+ReleaseMediumBenchMapUpperBound/8      			     0.683 ns        0.675 ns   1000000000
+ReleaseMediumBenchMapUpperBound/16     				 0.684 ns        0.676 ns   1000000000
+ReleaseMediumBenchMapUpperBound/32     			     0.729 ns        0.712 ns   1000000000
+ReleaseMediumBenchMapUpperBound_BigO     			  0.70 (1)        0.69 (1)  
+ReleaseMediumBenchMapUpperBound_RMS        			     3 %             2 %    
+

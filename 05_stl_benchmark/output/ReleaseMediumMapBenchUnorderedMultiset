@@ -1,0 +1,108 @@
+2019-11-27 19:25:46
+Running ./05_stl_benchmark_bench
+Run on (4 X 2712 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 1.18, 0.93, 0.97
+-------------------------------------------------------------------------------------------
+Benchmark                                                 Time             CPU   Iterations
+-------------------------------------------------------------------------------------------
+ReleaseMediumBenchUnorderedMultisetEmpty/1            0.383 ns        0.382 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty/2            0.383 ns        0.383 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty/4            0.392 ns        0.389 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty/8            0.384 ns        0.383 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty/16           0.385 ns        0.384 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty/32           0.409 ns        0.403 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetEmpty_BigO          0.39 (1)        0.39 (1)  
+ReleaseMediumBenchUnorderedMultisetEmpty_RMS              2 %             2 %    
+ReleaseMediumBenchUnorderedMultisetSize/1             0.331 ns        0.331 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize/2             0.337 ns        0.335 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize/4             0.334 ns        0.334 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize/8             0.332 ns        0.332 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize/16            0.333 ns        0.332 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize/32            0.333 ns        0.332 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetSize_BigO           0.33 (1)        0.33 (1)  
+ReleaseMediumBenchUnorderedMultisetSize_RMS               1 %             0 %    
+ReleaseMediumBenchUnorderedMultisetMaxSize/1          0.347 ns        0.345 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize/2          0.346 ns        0.344 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize/4          0.345 ns        0.343 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize/8          0.343 ns        0.340 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize/16         0.342 ns        0.339 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize/32         0.343 ns        0.341 ns   1000000000
+ReleaseMediumBenchUnorderedMultisetMaxSize_BigO        0.34 (1)        0.34 (1)  
+ReleaseMediumBenchUnorderedMultisetMaxSize_RMS            0 %             1 %    
+ReleaseMediumBenchUnorderedMultisetClear/1              714 ns          706 ns       992241
+ReleaseMediumBenchUnorderedMultisetClear/2              778 ns          755 ns       930800
+ReleaseMediumBenchUnorderedMultisetClear/4              840 ns          809 ns       863213
+ReleaseMediumBenchUnorderedMultisetClear/8             1255 ns         1104 ns       760039
+ReleaseMediumBenchUnorderedMultisetClear/16            2054 ns         1669 ns       406409
+ReleaseMediumBenchUnorderedMultisetClear/32            2790 ns         2314 ns       267325
+ReleaseMediumBenchUnorderedMultisetClear_BigO        516.19 lgN      435.18 lgN  
+ReleaseMediumBenchUnorderedMultisetClear_RMS             25 %            27 %    
+ReleaseMediumBenchUnorderedMultisetInsert/1            2066 ns         2026 ns       371634
+ReleaseMediumBenchUnorderedMultisetInsert/2            2033 ns         1984 ns       377288
+ReleaseMediumBenchUnorderedMultisetInsert/4            1916 ns         1881 ns       389246
+ReleaseMediumBenchUnorderedMultisetInsert/8            2141 ns         2103 ns       391074
+ReleaseMediumBenchUnorderedMultisetInsert/16           1975 ns         1954 ns       377294
+ReleaseMediumBenchUnorderedMultisetInsert/32           2023 ns         2002 ns       367861
+ReleaseMediumBenchUnorderedMultisetInsert_BigO      2025.74 (1)     1991.71 (1)  
+ReleaseMediumBenchUnorderedMultisetInsert_RMS             3 %             3 %    
+ReleaseMediumBenchUnorderedMultisetErase/1             1247 ns         1253 ns       547601
+ReleaseMediumBenchUnorderedMultisetErase/2             1262 ns         1265 ns       550588
+ReleaseMediumBenchUnorderedMultisetErase/4             1257 ns         1259 ns       561246
+ReleaseMediumBenchUnorderedMultisetErase/8             1251 ns         1254 ns       553161
+ReleaseMediumBenchUnorderedMultisetErase/16            1271 ns         1271 ns       554494
+ReleaseMediumBenchUnorderedMultisetErase/32            1252 ns         1256 ns       561531
+ReleaseMediumBenchUnorderedMultisetErase_BigO       1256.68 (1)     1259.51 (1)  
+ReleaseMediumBenchUnorderedMultisetErase_RMS              1 %             1 %    
+ReleaseMediumBenchUnorderedMultisetSwap/1              18.5 ns         18.5 ns     37960250
+ReleaseMediumBenchUnorderedMultisetSwap/2              18.2 ns         18.2 ns     37994664
+ReleaseMediumBenchUnorderedMultisetSwap/4              18.1 ns         18.0 ns     38609334
+ReleaseMediumBenchUnorderedMultisetSwap/8              18.2 ns         18.2 ns     38388941
+ReleaseMediumBenchUnorderedMultisetSwap/16             18.0 ns         18.0 ns     38290026
+ReleaseMediumBenchUnorderedMultisetSwap/32             18.2 ns         18.2 ns     38703295
+ReleaseMediumBenchUnorderedMultisetSwap_BigO          18.21 (1)       18.20 (1)  
+ReleaseMediumBenchUnorderedMultisetSwap_RMS               1 %             1 %    
+ReleaseMediumBenchUnorderedMultisetCount/1              507 ns          506 ns      1374993
+ReleaseMediumBenchUnorderedMultisetCount/2              498 ns          498 ns      1376166
+ReleaseMediumBenchUnorderedMultisetCount/4              510 ns          510 ns      1359676
+ReleaseMediumBenchUnorderedMultisetCount/8              514 ns          513 ns      1394837
+ReleaseMediumBenchUnorderedMultisetCount/16             511 ns          511 ns      1294712
+ReleaseMediumBenchUnorderedMultisetCount/32             504 ns          504 ns      1000000
+ReleaseMediumBenchUnorderedMultisetCount_BigO        507.42 (1)      507.06 (1)  
+ReleaseMediumBenchUnorderedMultisetCount_RMS              1 %             1 %    
+ReleaseMediumBenchUnorderedMultisetFind/1               624 ns          624 ns      1088321
+ReleaseMediumBenchUnorderedMultisetFind/2               625 ns          625 ns      1107819
+ReleaseMediumBenchUnorderedMultisetFind/4               627 ns          626 ns      1101273
+ReleaseMediumBenchUnorderedMultisetFind/8               649 ns          648 ns      1116688
+ReleaseMediumBenchUnorderedMultisetFind/16              635 ns          627 ns      1111332
+ReleaseMediumBenchUnorderedMultisetFind/32              631 ns          627 ns      1120247
+ReleaseMediumBenchUnorderedMultisetFind_BigO         631.64 (1)      629.39 (1)  
+ReleaseMediumBenchUnorderedMultisetFind_RMS               1 %             1 %    
+ReleaseMediumBenchUnorderedMultisetEqualRange/1         500 ns          497 ns      1371955
+ReleaseMediumBenchUnorderedMultisetEqualRange/2         508 ns          507 ns      1000000
+ReleaseMediumBenchUnorderedMultisetEqualRange/4         565 ns          558 ns      1384711
+ReleaseMediumBenchUnorderedMultisetEqualRange/8         522 ns          518 ns      1364577
+ReleaseMediumBenchUnorderedMultisetEqualRange/16        505 ns          502 ns      1397087
+ReleaseMediumBenchUnorderedMultisetEqualRange/32        505 ns          505 ns      1384807
+ReleaseMediumBenchUnorderedMultisetEqualRange_BigO     517.60 (1)      514.48 (1)  
+ReleaseMediumBenchUnorderedMultisetEqualRange_RMS          4 %             4 %    
+ReleaseMediumBenchUnorderedMultisetRehash/1            16.7 ns         16.6 ns     41730064
+ReleaseMediumBenchUnorderedMultisetRehash/2            16.6 ns         16.6 ns     42010489
+ReleaseMediumBenchUnorderedMultisetRehash/4            19.1 ns         18.9 ns     42297166
+ReleaseMediumBenchUnorderedMultisetRehash/8            16.8 ns         16.7 ns     36709757
+ReleaseMediumBenchUnorderedMultisetRehash/16           21.7 ns         21.5 ns     33642020
+ReleaseMediumBenchUnorderedMultisetRehash/32           20.6 ns         20.5 ns     33399744
+ReleaseMediumBenchUnorderedMultisetRehash_BigO        18.58 (1)       18.46 (1)  
+ReleaseMediumBenchUnorderedMultisetRehash_RMS            11 %            11 %    
+ReleaseMediumBenchUnorderedMultisetReserve/1           18.4 ns         18.4 ns     38336905
+ReleaseMediumBenchUnorderedMultisetReserve/2           18.4 ns         18.4 ns     38477664
+ReleaseMediumBenchUnorderedMultisetReserve/4           18.4 ns         18.4 ns     38226931
+ReleaseMediumBenchUnorderedMultisetReserve/8           18.5 ns         18.4 ns     38118668
+ReleaseMediumBenchUnorderedMultisetReserve/16          21.9 ns         21.8 ns     31980285
+ReleaseMediumBenchUnorderedMultisetReserve/32          21.3 ns         21.2 ns     32495567
+ReleaseMediumBenchUnorderedMultisetReserve_BigO       19.46 (1)       19.44 (1)  
+ReleaseMediumBenchUnorderedMultisetReserve_RMS            8 %             8 %    

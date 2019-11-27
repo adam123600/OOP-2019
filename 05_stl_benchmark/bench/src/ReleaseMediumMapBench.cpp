@@ -155,7 +155,7 @@ static void ReleaseMediumBenchMapClear(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapClear)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 
@@ -186,7 +186,7 @@ static void ReleaseMediumBenchMapInsert(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapInsert)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 
@@ -216,7 +216,7 @@ static void ReleaseMediumBenchMapErase(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapErase)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 
@@ -246,7 +246,7 @@ static void ReleaseMediumBenchMapSwap(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapSwap)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 
@@ -274,7 +274,7 @@ static void ReleaseMediumBenchMapCount(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapCount)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapCount)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 static void ReleaseMediumBenchMapFind(benchmark::State& state)
@@ -301,7 +301,7 @@ static void ReleaseMediumBenchMapFind(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapFind)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapFind)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 static void ReleaseMediumBenchMapEqualRange(benchmark::State& state)
@@ -328,7 +328,7 @@ static void ReleaseMediumBenchMapEqualRange(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapEqualRange)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapEqualRange)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 static void ReleaseMediumBenchMapLowerBound(benchmark::State& state)
@@ -351,7 +351,7 @@ static void ReleaseMediumBenchMapLowerBound(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapLowerBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapLowerBound)->RangeMultiplier(2)->Range(1, 32)->Complexity();
 
 
 
@@ -375,4 +375,4 @@ static void ReleaseMediumBenchMapUpperBound(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseMediumBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseMediumBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 32)->Complexity();
