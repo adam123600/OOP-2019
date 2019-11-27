@@ -3,7 +3,6 @@
 
 // TODO: Add benchmarks for operator<. operator==, and hash
 
-/*
 
 static void SmallBenchLessOperator(benchmark::State& state)
 {
@@ -46,4 +45,3 @@ static void SmallBenchHash(benchmark::State& state)
 }
 BENCHMARK(SmallBenchHash);
 
-*/

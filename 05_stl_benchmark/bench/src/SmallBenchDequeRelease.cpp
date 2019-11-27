@@ -27,7 +27,7 @@ static void ReleaseSmallBenchDequeAt(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeAt)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeAt)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchDequeOperatorSquareBracket(benchmark::State& state)
 {
@@ -49,7 +49,7 @@ static void ReleaseSmallBenchDequeOperatorSquareBracket(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeOperatorSquareBracket)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeOperatorSquareBracket)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeFront(benchmark::State& state)
@@ -71,7 +71,7 @@ static void ReleaseSmallBenchDequeFront(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeFront)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeBack(benchmark::State& state)
@@ -93,7 +93,7 @@ static void ReleaseSmallBenchDequeBack(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeBack)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeEmpty(benchmark::State& state)
@@ -116,7 +116,7 @@ static void ReleaseSmallBenchDequeEmpty(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeEmpty)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -137,7 +137,7 @@ static void ReleaseSmallBenchDequeSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeMaxSize(benchmark::State& state)
@@ -157,7 +157,7 @@ static void ReleaseSmallBenchDequeMaxSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeMaxSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchDequeShrinkToFit(benchmark::State& state)
 {
@@ -187,7 +187,7 @@ static void ReleaseSmallBenchDequeShrinkToFit(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeShrinkToFit)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeShrinkToFit)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeClear(benchmark::State& state)
@@ -217,7 +217,7 @@ static void ReleaseSmallBenchDequeClear(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeClear)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeInsert(benchmark::State& state)
@@ -242,7 +242,7 @@ static void ReleaseSmallBenchDequeInsert(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeInsert)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeErase(benchmark::State& state)
@@ -269,7 +269,7 @@ static void ReleaseSmallBenchDequeErase(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeErase)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -296,7 +296,7 @@ static void ReleaseSmallBenchDequePushBack(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequePushBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequePushBack)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequePopBack(benchmark::State& state)
@@ -322,7 +322,7 @@ static void ReleaseSmallBenchDequePopBack(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequePopBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequePopBack)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequePushFront(benchmark::State& state)
@@ -349,7 +349,7 @@ static void ReleaseSmallBenchDequePushFront(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequePushFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequePushFront)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -376,7 +376,7 @@ static void ReleaseSmallBenchDequePopFront(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequePopFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequePopFront)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchDequeResize(benchmark::State& state)
@@ -402,7 +402,7 @@ static void ReleaseSmallBenchDequeResize(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeResize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeResize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchDequeSwap(benchmark::State& state)
 {
@@ -426,4 +426,4 @@ static void ReleaseSmallBenchDequeSwap(benchmark::State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchDequeSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchDequeSwap)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();

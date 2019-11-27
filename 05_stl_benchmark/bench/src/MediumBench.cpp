@@ -3,7 +3,7 @@
 
 // TODO: Add benchmarks for operator<. operator==, and hash
 
-/*
+
 static void MediumBenchLessOperator(benchmark::State& state)
 {
     Medium a{};
@@ -50,4 +50,3 @@ static void MediumBenchHash(benchmark::State& state)
 }
 BENCHMARK(MediumBenchHash);
 
- */

@@ -27,7 +27,7 @@ static void ReleaseSmallBenchMapAt(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapAt)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapAt)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapOperatorSquareBracket(benchmark::State& state)
@@ -50,7 +50,7 @@ static void ReleaseSmallBenchMapOperatorSquareBracket(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapOperatorSquareBracket)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapOperatorSquareBracket)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapEmpty(benchmark::State& state)
@@ -73,7 +73,7 @@ static void ReleaseSmallBenchMapEmpty(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapEmpty)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -97,7 +97,7 @@ static void ReleaseSmallBenchMapSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapMaxSize(benchmark::State& state)
@@ -120,7 +120,7 @@ static void ReleaseSmallBenchMapMaxSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapMaxSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -154,7 +154,7 @@ static void ReleaseSmallBenchMapClear(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapClear)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -185,7 +185,7 @@ static void ReleaseSmallBenchMapInsert(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapInsert)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -215,7 +215,7 @@ static void ReleaseSmallBenchMapErase(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapErase)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -245,7 +245,7 @@ static void ReleaseSmallBenchMapSwap(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapSwap)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -273,7 +273,7 @@ static void ReleaseSmallBenchMapCount(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapCount)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapCount)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapFind(benchmark::State& state)
@@ -300,7 +300,7 @@ static void ReleaseSmallBenchMapFind(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapFind)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapFind)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapEqualRange(benchmark::State& state)
@@ -327,7 +327,7 @@ static void ReleaseSmallBenchMapEqualRange(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapEqualRange)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapEqualRange)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchMapLowerBound(benchmark::State& state)
@@ -350,7 +350,7 @@ static void ReleaseSmallBenchMapLowerBound(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapLowerBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapLowerBound)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -374,4 +374,4 @@ static void ReleaseSmallBenchMapUpperBound(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchMapUpperBound)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();

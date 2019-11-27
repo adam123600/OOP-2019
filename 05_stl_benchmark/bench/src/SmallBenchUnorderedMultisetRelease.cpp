@@ -26,7 +26,7 @@ static void ReleaseSmallBenchUnorderedMultisetEmpty(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetEmpty)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -49,7 +49,7 @@ static void ReleaseSmallBenchUnorderedMultisetSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -72,7 +72,7 @@ static void ReleaseSmallBenchUnorderedMultisetMaxSize(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetMaxSize)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchUnorderedMultisetClear(benchmark::State& state)
 {
@@ -102,7 +102,7 @@ static void ReleaseSmallBenchUnorderedMultisetClear(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetClear)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchUnorderedMultisetInsert(benchmark::State& state)
@@ -129,7 +129,7 @@ static void ReleaseSmallBenchUnorderedMultisetInsert(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetInsert)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchUnorderedMultisetErase(benchmark::State& state)
@@ -155,7 +155,7 @@ static void ReleaseSmallBenchUnorderedMultisetErase(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetErase)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchUnorderedMultisetSwap(benchmark::State& state)
 {
@@ -180,7 +180,7 @@ static void ReleaseSmallBenchUnorderedMultisetSwap(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetSwap)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchUnorderedMultisetCount(benchmark::State& state)
 {
@@ -201,7 +201,7 @@ static void ReleaseSmallBenchUnorderedMultisetCount(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetCount)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetCount)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 static void ReleaseSmallBenchUnorderedMultisetFind(benchmark::State& state)
 {
@@ -222,7 +222,7 @@ static void ReleaseSmallBenchUnorderedMultisetFind(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetFind)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetFind)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchUnorderedMultisetEqualRange(benchmark::State& state)
@@ -244,7 +244,7 @@ static void ReleaseSmallBenchUnorderedMultisetEqualRange(benchmark::State& state
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetEqualRange)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetEqualRange)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 
@@ -268,7 +268,7 @@ static void ReleaseSmallBenchUnorderedMultisetRehash(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetRehash)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetRehash)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
 
 
 static void ReleaseSmallBenchUnorderedMultisetReserve(benchmark::State& state)
@@ -291,4 +291,4 @@ static void ReleaseSmallBenchUnorderedMultisetReserve(benchmark::State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ReleaseSmallBenchUnorderedMultisetReserve)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReleaseSmallBenchUnorderedMultisetReserve)->RangeMultiplier(2)->Range(1, 1<<16)->Complexity();
