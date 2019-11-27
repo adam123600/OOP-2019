@@ -1,0 +1,68 @@
+2019-11-27 19:43:27
+Running ./05_stl_benchmark_bench
+Run on (4 X 2712 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 0.80, 1.74, 1.61
+-----------------------------------------------------------------------------------------
+Benchmark                                               Time             CPU   Iterations
+-----------------------------------------------------------------------------------------
+ReleaseLargeBenchDequeAt/1                         130472 ns       130226 ns         5271
+ReleaseLargeBenchDequeAt/2                         146449 ns       145772 ns         4930
+ReleaseLargeBenchDequeAt/4                         154332 ns       153794 ns         3764
+ReleaseLargeBenchDequeAt/8                         136433 ns       136150 ns         5093
+ReleaseLargeBenchDequeAt/16                        136157 ns       136071 ns         5176
+ReleaseLargeBenchDequeAt/32                        137895 ns       137715 ns         5120
+ReleaseLargeBenchDequeAt_BigO                   140289.59 (1)   139954.90 (1)  
+ReleaseLargeBenchDequeAt_RMS                            6 %             5 %    
+ReleaseLargeBenchDequeOperatorSquareBracket/1      131556 ns       131426 ns         5335
+ReleaseLargeBenchDequeOperatorSquareBracket/2      130537 ns       130345 ns         5325
+ReleaseLargeBenchDequeOperatorSquareBracket/4      132273 ns       132198 ns         5310
+ReleaseLargeBenchDequeOperatorSquareBracket/8      134340 ns       134124 ns         5241
+ReleaseLargeBenchDequeOperatorSquareBracket/16     135505 ns       135427 ns         5188
+ReleaseLargeBenchDequeOperatorSquareBracket/32     136206 ns       135794 ns         5145
+ReleaseLargeBenchDequeOperatorSquareBracket_BigO  133402.91 (1)   133218.88 (1)  
+ReleaseLargeBenchDequeOperatorSquareBracket_RMS          2 %             2 %    
+ReleaseLargeBenchDequeFront/1                      130402 ns       129509 ns         5427
+ReleaseLargeBenchDequeFront/2                      130534 ns       129607 ns         5389
+ReleaseLargeBenchDequeFront/4                      130019 ns       129150 ns         5418
+ReleaseLargeBenchDequeFront/8                      136288 ns       135222 ns         5416
+ReleaseLargeBenchDequeFront/16                     130367 ns       130149 ns         5372
+ReleaseLargeBenchDequeFront/32                     130899 ns       130695 ns         5359
+ReleaseLargeBenchDequeFront_BigO                131418.24 (1)   130721.98 (1)  
+ReleaseLargeBenchDequeFront_RMS                         2 %             2 %    
+ReleaseLargeBenchDequeBack/1                       129006 ns       128837 ns         5433
+ReleaseLargeBenchDequeBack/2                       129073 ns       128874 ns         5394
+ReleaseLargeBenchDequeBack/4                       129677 ns       129558 ns         5353
+ReleaseLargeBenchDequeBack/8                       130486 ns       130315 ns         5395
+ReleaseLargeBenchDequeBack/16                      129252 ns       129129 ns         5411
+ReleaseLargeBenchDequeBack/32                      129593 ns       129412 ns         5383
+ReleaseLargeBenchDequeBack_BigO                 129514.43 (1)   129354.23 (1)  
+ReleaseLargeBenchDequeBack_RMS                          0 %             0 %    
+ReleaseLargeBenchDequeEmpty/1                       0.347 ns        0.347 ns   1000000000
+ReleaseLargeBenchDequeEmpty/2                       0.344 ns        0.344 ns   1000000000
+ReleaseLargeBenchDequeEmpty/4                       0.336 ns        0.336 ns   1000000000
+ReleaseLargeBenchDequeEmpty/8                       0.339 ns        0.339 ns   1000000000
+ReleaseLargeBenchDequeEmpty/16                      0.344 ns        0.343 ns   1000000000
+ReleaseLargeBenchDequeEmpty/32                      0.339 ns        0.339 ns   1000000000
+ReleaseLargeBenchDequeEmpty_BigO                     0.34 (1)        0.34 (1)  
+ReleaseLargeBenchDequeEmpty_RMS                         1 %             1 %    
+ReleaseLargeBenchDequeSize/1                         1.01 ns         1.01 ns    674897075
+ReleaseLargeBenchDequeSize/2                         1.04 ns         1.04 ns    697532882
+ReleaseLargeBenchDequeSize/4                         1.04 ns         1.04 ns    699316390
+ReleaseLargeBenchDequeSize/8                         1.01 ns         1.01 ns    672798320
+ReleaseLargeBenchDequeSize/16                        1.03 ns         1.03 ns    686885616
+ReleaseLargeBenchDequeSize/32                        1.05 ns         1.02 ns    683000867
+ReleaseLargeBenchDequeSize_BigO                      1.03 (1)        1.02 (1)  
+ReleaseLargeBenchDequeSize_RMS                          2 %             1 %    
+ReleaseLargeBenchDequeMaxSize/1                     0.350 ns        0.343 ns   1000000000
+ReleaseLargeBenchDequeMaxSize/2                     0.348 ns        0.343 ns   1000000000
+ReleaseLargeBenchDequeMaxSize/4                     0.352 ns        0.347 ns   1000000000
+ReleaseLargeBenchDequeMaxSize/8                     0.345 ns        0.344 ns   1000000000
+ReleaseLargeBenchDequeMaxSize/16                    0.343 ns        0.342 ns   1000000000
+ReleaseLargeBenchDequeMaxSize/32                    0.346 ns        0.345 ns   1000000000
+ReleaseLargeBenchDequeMaxSize_BigO                   0.35 (1)        0.34 (1)  
+ReleaseLargeBenchDequeMaxSize_RMS                       1 %             0 %    
