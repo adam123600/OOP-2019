@@ -1,18 +1,18 @@
-#include "Universe.h"
+#include "UniverseImpl.h"
 
-Universe::Universe(Time &time, Space &space, Observer &observer)
+UniverseImpl::UniverseImpl(TimeInterface &time, SpaceInterface &space, ObserverInterface &observer)
     : time(time), space(space), observer(observer) {
 
 }
 
-void Universe::create() {
+void UniverseImpl::create() {
 
     time.create(true);
     space.create(11);
     observer.remember("How many dimensions there are?", std::to_string(space.dimensions()));
 }
 
-void Universe::simulate(long years) {
+void UniverseImpl::simulate(long years) {
 
     long long now;
 
