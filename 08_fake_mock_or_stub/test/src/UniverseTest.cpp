@@ -54,3 +54,52 @@ TEST(Universe, Create)
 
     universe.create();
 }
+
+TEST(Universe, simulateEarth)
+{
+    StrictMock<TimeMock> timeMock{};
+    StrictMock<SpaceMock> spaceMock{};
+    StrictMock<ObserverMock> observerMock{};
+
+    Universe universe(timeMock, spaceMock, observerMock);
+
+
+    EXPECT_CALL(timeMock, now).WillOnce(Return(9300000000)).WillOnce(Return(9300000001));
+    EXPECT_CALL(timeMock, flow()).WillOnce(Return());
+    EXPECT_CALL(observerMock, remember("Is there planet Earth?", "Yes!"));
+
+    universe.simulate(9300000001);
+}
+
+TEST(Universe, simulateLife)
+{
+    StrictMock<TimeMock> timeMock{};
+    StrictMock<SpaceMock> spaceMock{};
+    StrictMock<ObserverMock> observerMock{};
+
+    Universe universe(timeMock, spaceMock, observerMock);
+
+
+    EXPECT_CALL(timeMock, now).WillOnce(Return(9900000000)).WillOnce(Return(9900000001));
+    EXPECT_CALL(timeMock, flow()).WillOnce(Return());
+    EXPECT_CALL(observerMock, remember("Does life exist?", "Yes!"));
+
+    universe.simulate(9900000001);
+}
+
+TEST(Universe, simulateEvolved)
+{
+    StrictMock<TimeMock> timeMock{};
+    StrictMock<SpaceMock> spaceMock{};
+    StrictMock<ObserverMock> observerMock{};
+
+    Universe universe(timeMock, spaceMock, observerMock);
+
+
+    EXPECT_CALL(timeMock, now).WillOnce(Return(13800000000)).WillOnce(Return(13800000001));
+    EXPECT_CALL(timeMock, flow()).WillOnce(Return());
+    EXPECT_CALL(observerMock, remember("Have People evolved?", "Yes!"));
+
+    universe.simulate(13800000001);
+}
+
