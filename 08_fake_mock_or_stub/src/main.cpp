@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "UniverseImpl.h"
+#include "Universe.h"
 
-#include "TimeImpl.h"
-#include "SpaceImpl.h"
-#include "ObserverImpl.h"
+#include "Time.h"
+#include "Space.h"
+#include "Observer.h"
 
 int main() {
 
@@ -21,11 +21,11 @@ int main() {
 
     std::cout << "Whatever..." << std::endl;
 
-    TimeImpl time{};
-    SpaceImpl space{};
-    ObserverImpl observer{};
+    Time time{};
+    Space space{};
+    Observer observer{};
 
-    UniverseImpl universe{time, space, observer};
+    Universe universe{time, space, observer};
 
     universe.create();
     universe.simulate(13800000000);

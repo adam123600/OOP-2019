@@ -1,8 +1,8 @@
-#include "SpaceImpl.h"
+#include "Space.h"
 
 #include <limits>
 
-void SpaceImpl::create(unsigned int dimensions) {
+void Space::create(unsigned int dimensions) {
 
     dimensionsCount = dimensions;
 
@@ -10,6 +10,6 @@ void SpaceImpl::create(unsigned int dimensions) {
     points.resize(infiniteNumberOfPoints);
 }
 
-unsigned int SpaceImpl::dimensions() const {
+unsigned int Space::dimensions() const {
     return dimensionsCount;
 }
