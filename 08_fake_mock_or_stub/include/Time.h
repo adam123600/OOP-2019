@@ -1,14 +1,21 @@
+//
+// Created by student on 05.12.2019.
+//
+
 #pragma once
 
-class Time {
+/*
+#ifndef INC_08_FAKE_MOCK_OR_STUB_TIME_H
+#define INC_08_FAKE_MOCK_OR_STUB_TIME_H
+
+#endif //INC_08_FAKE_MOCK_OR_STUB_TIME_H
+*/
+
+class Time
+{
 public:
+    virtual void create(bool endless) = 0;
+    virtual long long now() const = 0;
 
-    void create(bool endless);
-    long long now() const;
-
-    void flow();
-
-private:
-    long long year;
-    bool endless;
+    virtual void flow() = 0;
 };
