@@ -17,9 +17,6 @@ public slots:
 
 private:
     double przy1;
-    double przy2;
-    int flag1;
-    int flag2;
 };
 
 #endif // ACCELERATION_H
