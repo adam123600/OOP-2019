@@ -20,9 +20,13 @@ signals:
     void opened();
     void saved();
 
+    void done(); // do stanu LOG
+
 public slots:
     void open();
     void save();
+
+    void log(); // do stanu LOG
 
 private:
     Ui::MainWindow *ui;
