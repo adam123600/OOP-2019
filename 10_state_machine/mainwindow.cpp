@@ -18,18 +18,24 @@ MainWindow::MainWindow(QWidget *parent) :
     auto stateMachine = new QStateMachine(this); // podpiety glowny obiekt czyli okno
     // jak zxamkniemy okno  to i maszyna stanow sie usunie ( obiekt maszyny stanow)
 
-   // TODO: Create states // done
+    // TODO: Create states // done
     // konkretne stany podpiede pod maszynhe
-   // auto greenState = new QState(stateMachine); //stany podpiede pod maszyne stanow
-   //auto yellowState = new QState(stateMachine);
-   // auto redState = new QState(stateMachine);
-   //  auto logState = new QState(stateMachine);
+    // auto greenState = new QState(stateMachine); //stany podpiede pod maszyne stanow
+    // auto yellowState = new QState(stateMachine);
+    // auto redState = new QState(stateMachine);
+    // auto logState = new QState(stateMachine);
 
     auto unlockedState = new QState(stateMachine);
     auto lockedState = new QState(stateMachine);
 
     auto startupState = new QState(unlockedState);
     auto openState = new QState(unlockedState);
+    auto errorState = new QState(unlockedState);
+    auto viewState = new QState(unlockedState);
+    auto editState = new QState(unlockedState);
+    auto saveState = new QState(unlockedState);
+
+
 
     // TODO: Set appropriate 'assignProperty' // done
     // pidpisujemy jak maszyna ma wygladac w konkretnym stanie
@@ -44,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent) :
     unlockedState->assignProperty(ui->teText, "enabled", "true");
 
     startupState->assignProperty(ui->pbOpen, "enabled", "true");
-    startupState->assignProperty(ui->pbSave, "enabled", "true");
+    startupState->assignProperty(ui->pbSave, "enabled", "false");
     startupState->assignProperty(ui->teText, "enabled", "false");
     startupState->assignProperty(ui->teText, "placeholderText", "Open file to start editing...");
 
@@ -52,6 +58,19 @@ MainWindow::MainWindow(QWidget *parent) :
     lockedState->assignProperty(ui->pbOpen, "enabled", "false");
     lockedState->assignProperty(ui->pbSave, "enabled", "false");
     lockedState->assignProperty(ui->teText, "enabled", "false");
+
+    errorState->assignProperty(ui->pbOpen, "enabled", "true");
+    errorState->assignProperty(ui->pbSave, "enabled", "false");
+    errorState->assignProperty(ui->teText, "enabled", "false");
+    errorState->assignProperty(ui->teText, "placeholderText", "Error ocured. Open file to start editing...");
+
+    viewState->assignProperty(ui->pbOpen, "enabled", "true");
+    viewState->assignProperty(ui->pbSave, "enabled", "false");
+    viewState->assignProperty(ui->teText, "enabled", "true");
+
+    editState->assignProperty(ui->pbOpen, "enabled", "false");
+    editState->assignProperty(ui->pbSave, "enabled", "true");
+    editState->assignProperty(ui->teText, "enabled", "true");
 
 
 
@@ -68,14 +87,24 @@ MainWindow::MainWindow(QWidget *parent) :
     unlockedState->addTransition(ui->pbToggle, SIGNAL(clicked()), lockedState);
 
     startupState->addTransition(ui->pbOpen, SIGNAL(clicked()), openState);
-    //openState->addTransition(ui->pbOpen, SIGNAL(clicked()), startupState);
 
     connect(openState, SIGNAL(entered()), this, SLOT(open()));
-
+    openState->addTransition(this, SIGNAL(opened()), viewState);
+    openState->addTransition(this, SIGNAL(error()), errorState);
 
     lockedState->addTransition(ui->pbToggle, SIGNAL(clicked()), unlockedState);
 
+    errorState->addTransition(ui->pbOpen, SIGNAL(clicked()), openState);
+    errorState->addTransition(ui->pbToggle, SIGNAL(clicked()), lockedState);
 
+    viewState->addTransition(ui->pbOpen, SIGNAL(clicked(bool)), openState);
+    viewState->addTransition(ui->teText, SIGNAL(textChanged()), editState);
+
+    editState->addTransition(ui->pbSave, SIGNAL(clicked()), saveState);
+
+    connect(saveState, SIGNAL(entered()), this, SLOT(save()));
+    saveState->addTransition(this, SIGNAL(saved()), viewState);
+    saveState->addTransition(this, SIGNAL(error()), errorState);
 
 
     // TODO: Set initial state // done
@@ -104,22 +133,20 @@ void MainWindow::open()
     // TODO: Set text and emit 'opened' if suceeded
     // TODO: Save file name in 'fileName'
 
-   // qDebug() << "ESSSA OPEN!";
-
-
-//    auto openDialog = new QFileDialog();
-//    openDialog->exec();
-
-    QString fileName = QFileDialog::getOpenFileName(this, "Open a File", "/home/student");
-    //ui->teText->setText(fileName);
+    fileName = QFileDialog::getOpenFileName(this, "Open a File", "/home/student");
 
     QFile file( fileName );
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        // nie udalo sie otworzyc pliku
+        emit error();
+    }
+
     QTextStream in(&file);
     QString line = in.readAll();
     ui->teText->setText(line);
 
-    qDebug() << "fileName: " << fileName;
+    //qDebug() << "fileName: " << fileName;
     emit opened();
 }
 
@@ -128,6 +155,17 @@ void MainWindow::save()
     // TODO: Open 'fileName' for writing
     // TODO: Emit 'error' if opening failed
     // TODO: Save file and emit 'saved' if succeeded
+
+    QFile file(this->fileName);
+    if ( !file.open(QIODevice::ReadWrite))
+        emit error();
+
+    else {
+        QTextStream stream(&file);
+        stream << ui->teText->toPlainText();
+        file.close();
+        emit saved();
+    }
 }
 
 void MainWindow::log()
