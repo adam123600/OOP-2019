@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     auto editState = new QState(unlockedState);
     auto saveState = new QState(unlockedState);
 
-
+    auto historyState = new QHistoryState(unlockedState);
 
     // TODO: Set appropriate 'assignProperty' // done
     // pidpisujemy jak maszyna ma wygladac w konkretnym stanie
@@ -92,7 +92,8 @@ MainWindow::MainWindow(QWidget *parent) :
     openState->addTransition(this, SIGNAL(opened()), viewState);
     openState->addTransition(this, SIGNAL(error()), errorState);
 
-    lockedState->addTransition(ui->pbToggle, SIGNAL(clicked()), unlockedState);
+    //lockedState->addTransition(ui->pbToggle, SIGNAL(clicked()), unlockedState);
+    lockedState->addTransition(ui->pbToggle, SIGNAL(clicked()), historyState);
 
     errorState->addTransition(ui->pbOpen, SIGNAL(clicked()), openState);
     errorState->addTransition(ui->pbToggle, SIGNAL(clicked()), lockedState);
