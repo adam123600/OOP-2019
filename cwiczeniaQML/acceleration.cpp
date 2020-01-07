@@ -4,20 +4,19 @@
 acceleration::acceleration(QObject *parent) : QObject(parent)
 {
     przy1 = 0;
+}
 
+double acceleration::get()
+{
+    return przy2 - przy1;
 }
 
 void acceleration::onSpeedChanged(double v)
 {
-    auto temp = v - this->przy1;
-    this->przy1 = v;
+    przy1 = przy2;
+    przy2 = v;
 
-    if( temp>0 )
-        emit changed( temp );
-
-    else
-        emit changed(0);
+    emit changed(get());
 
     qDebug() << "[Acceleration] Value: " << v;
-
 }

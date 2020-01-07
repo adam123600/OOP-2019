@@ -26,17 +26,10 @@ Window {
         {
             id: displacement
             value: 5
-            onChanged:  function()
+            onChanged:
             {
-                console.log("DZIALA displacement");
-                //speed.onDisplacementChanged(value);
-                //speed.onChanged(value);
-               // displacement.changed(value);
-                //displacement.set(s);
-                //displacement.changed(value);
-                speed.changed(value);
-
-
+                //console.log("DZIALA displacement");
+                speed.onDisplacementChanged(value);
             }
 
         }
@@ -45,28 +38,20 @@ Window {
         {
             id: speed
 
-            onChanged: function(s)
+            onChanged:
             {
-                console.log("Dziala speed");
-               // speed.onDisplacementChanged(s);
-                //speed.onDisplacementChanged(s);
-                //acceleration.onChanged(s);
-                //speed.onDisplacementChanged(s);
-                //element = speed.onDisplacementChanged(s);
-                speed.onDisplacementChanged(value);
-
+                //console.log("Dziala speed");
+                acceleration.onSpeedChanged(value);
+                element.text = "Speed " + speed.get();
             }
         }
 
         Acceleration
         {
             id: acceleration
-            onChanged: function(s)
+            onChanged:
             {
-                console.log("Dziala acceleration");
-               acceleration.onSpeedChanged(s);
-
-                element1.text= "ASD";
+                element1.text = "Acc " + acceleration.get();
             }
         }
 
@@ -76,7 +61,7 @@ Window {
         y: 56
         width: 249
         height: 43
-        text: qsTr("0")
+        text: qsTr("Tutaj wpisz polozenie")
         font.pixelSize: 12
     }
 
